@@ -1,0 +1,92 @@
+@font-face {
+  font-family: IranSans;
+  src: url("../src/font/IRANSansWeb.woff");
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "IranSans";
+
+  /* change it!!!! */
+  background-color: gray;
+  /*  */
+}
+
+.header {
+  background-color: #ffffff;
+  border-radius: 0 0 30px 30px;
+  padding: 20px 0;
+}
+
+.header__logo {
+  width: 110px;
+  height: 50px;
+  background: url("../src/img/logo-header.png") no-repeat;
+  background-size: contain;
+}
+
+.header__btnS__single {
+  width: 120px;
+  padding: 10px 0;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.header__btnS__single--login {
+  color: green;
+    background-color: rgba(40, 167, 69, .2);
+  border: solid 1px;
+}
+
+.header__btnS__single--register {
+  
+  color: white;
+}
+
+.header__menu__single {
+  margin: 0 15px;
+}
+
+.header__menu__single--dropdown {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.header__menu__single a:hover {
+  color: #ff364a;
+}
+
+.header__menu__single--dropdown:hover svg g {
+  fill: #ff364a;
+}
+
+.header__menu__single--dropdown svg {
+  width: 20px;
+  height: 20px;
+}
+
+.header__menu__single--dropdown:hover .hover-menu {
+ display: block;
+}
+
+.hover-menu {
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  top: 25px;
+  background-color: white;
+  display: none;
+}
+
+.social--responsive {
+  height: 71px;
+  display: flex;
+  align-items: center;
+}
+
+.header__btnS__single--login:hover {
+  background: rgb(33, 136, 56);
+  border: none;
+}

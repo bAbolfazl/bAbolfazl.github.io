@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- reset style -->
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- custom style -->
+    <link rel="stylesheet" href="./styles/main.styles.css">
+    <link rel="stylesheet" href="./styles/responsive.styles.css">
+</head>
+
+<body>
+    <div class="header container-fluid fixed-top ">
+        <div class="container-xl d-flex justify-content-between align-items-center flex-wrap">
+            <!-- <div class="d-flex justify-content-between align-items-center"> -->
+            <div class="header__top__burger-btn d-xl-none mr-3  ">
+                <button data-toggle="collapse" data-target="#me" class="btn" aria-expanded="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="header__logo"><a href="#" class="d-inline-block w-100 h-100"></a></div>
+            <div class="header__menu d-xl-flex d-none">
+                <div class="header__menu__single"><a href="#"> صفحه اصلی</a></div>
+                <div class="header__menu__single header__menu__single--dropdown"><a href="#">لیست محصولات
+                        <a href="#">
+                            <svg>
+                                <g id="Group_16710" data-name="Group 16710" transform="translate(0.389)">
+                                    <path id="angle-right-b" d="M6.974,5.626,1.619.28A.947.947,0,0,0,.275,1.614L4.959,6.345.275,11.029a.947.947,0,1,0,1.344,1.334L6.974,7.017a.946.946,0,0,0,0-1.391Z" transform="translate(18.418 8) rotate(90)" />
+                                    <rect id="Rectangle_4839" data-name="Rectangle 4839" width="24" height="24" transform="translate(-0.389)" fill="none" />
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="hover-menu shadow-lg p-2">
+                            <ul>
+                                <li>یک</li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="header__menu__single header__menu__single--dropdown"><a href="#"> دوره‌های حضوری
+                        <svg>
+                            <g id="Group_16710" data-name="Group 16710" transform="translate(0.389)">
+                                <path id="angle-right-b" d="M6.974,5.626,1.619.28A.947.947,0,0,0,.275,1.614L4.959,6.345.275,11.029a.947.947,0,1,0,1.344,1.334L6.974,7.017a.946.946,0,0,0,0-1.391Z" transform="translate(18.418 8) rotate(90)" />
+                                <rect id="Rectangle_4839" data-name="Rectangle 4839" width="24" height="24" transform="translate(-0.389)" fill="none" />
+                            </g>
+                        </svg>
+                    </a></div>
+                <div class="header__menu__single"><a href="#">مقالات آموزشی</a></div>
+                <div class="header__menu__single"><a href="#">تماس‌با‌ما</a></div>
+            </div>
+            <!-- </div> -->
+            <!-- <div class="d-flex justify-content-between align-items-center"> -->
+            <div class="header__btnS d-sm-flex d-none">
+                <button class="header__btnS__single header__btnS__single--login btn btn-outline-dark">ورود</button>
+                <button class="header__btnS__single header__btnS__single--register btn btn-success">ثبت‌نام</button>
+            </div>
+            <button class="d-sm-none header__btn--resp header__btnS__single header__btnS__single--register btn btn-success">ورود
+                /
+                ثبت‌نام</button>
+            <div class="social--responsive flex-row flex-sm-column justify-content-sm-around justify-content-center">
+                <div class="icon-sn mx-4 mx-sm-0">
+                    <a href="https://www.instagram.com/ashpaz.sho/" target="_blank">
+                        <img alt="آموزشگاه آشپزی آشپزشو قنادشو" src="https://ashpazsho.ir/images/instagram.svg" style="/*! width: 100%; */width: 32px;/*! height: 25px; */">
+                    </a>
+                </div>
+                <div class="icon-sn mx-4 mx-sm-0">
+                    <a href="https://telegram.me/masimasterchef" target="_blank">
+                        <img alt="آموزشگاه آشپزی آشپزشو قنادشو" src="https://ashpazsho.ir/images/telegram.svg" style="/*! width: 100%; */width: 32px;/*! height: 25px; */">
+                    </a>
+                </div>
+                <!-- phone -->
+                <div class="icon-sn d-sm-none mx-4 mx-sm-0">
+                    <a href="tel:02166715466" target="_blank">
+                        <i class="fa fa-phone d-block d-lg-none" style="font-size:28px;color: white;margin-right: 2px;rotate: -10deg;"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- </div>  -->
+        </div>
+        <!-- moblie sliding menu -->
+        <div id="me" class="header_dropdown-menu border-top collapse">
+            <div class="mr-5">
+                <ul class="menu__list flex-column mr-n5">
+                    <a href="#">
+                        <li class="menu__list__item px-3 py-2">همکاری با ما</li>
+                    </a>
+                    <a href="#">
+                        <li class="menu__list__item px-3 py-2">درباره ما</li>
+                    </a>
+                    <a href="#">
+                        <li class="menu__list__item px-3 py-2">تماس با ما</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="background: red; height: 200px">asdf</div>
+    <div style="background: blue; height: 200px" onclick="x()">asdf</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+
+</html>

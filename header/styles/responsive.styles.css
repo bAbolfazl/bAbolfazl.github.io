@@ -1,0 +1,26 @@
+/* sm */
+@media only screen and (max-width: 576px) {
+  .header {
+    border-radius: initial;
+  }
+  .header__btnS__single {
+    border-radius: 12px;
+  }
+  .container-xl {
+    padding: 0;
+  }
+
+  .header__logo {
+    width: 100px;
+    height: 36px;
+  }
+  .social--responsive {
+    width: 100%;
+  }
+
+  .header__btnS__single {
+    padding: 5px 0;
+  }
+  
+}
+

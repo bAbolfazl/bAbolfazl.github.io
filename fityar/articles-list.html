@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitYar</title>
+
+    <!-- bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- slick styles -->
+    <link rel="stylesheet" href="./assets/lib/slick/slick.css">
+    <link rel="stylesheet" href="./assets/lib/slick/slick-theme.css">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/articles-list.css">
+    <link rel="stylesheet" href="./styles/slick-custom.css">
+    <link rel="stylesheet" href="./styles/resp.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container-fluid header shadow--custom d-flex">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- mobil hamberger -->
+                <div id="hambergerBtn" class="header__search-btn d-lg-none">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#5f6368" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line class="mobile-search__input__back--center mobile-search__input__back--center__" x1="3"
+                            y1="12" x2="21" y2="12">
+                        </line>
+                        <line class="mobile-search__input__back--top mobile-search__input__back--top__" x1="3" y1="6"
+                            x2="21" y2="6">
+                        </line>
+                        <line class="mobile-search__input__back--bottom mobile-search__input__back--bottom__" x1="3"
+                            y1="18" x2="21" y2="18">
+                        </line>
+                    </svg>
+                </div>
+
+                <div class="header__login align-items-center d-none d-lg-flex">
+                    <a href="#">
+                        <div class="header__login-btn btn">
+                            ورود
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="header__search-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19.811" height="19.811"
+                                viewBox="0 0 19.811 19.811">
+                                <defs>
+                                    <style>
+                                        .prefix__cls-1__search {
+                                            fill: none !important;
+                                            stroke: #959595 !important;
+                                            stroke-linecap: round;
+                                            stroke-linejoin: round;
+                                            stroke-width: 1.5px;
+                                        }
+                                    </style>
+                                </defs>
+                                <g id="prefix__search" transform="translate(-2.25 -2.25)">
+                                    <circle id="prefix__Ellipse_122" cx="8" cy="8" r="8" class="prefix__cls-1__search"
+                                        data-name="Ellipse 122" transform="translate(3 3)" />
+                                    <path id="prefix__Line_128" d="M4.35 4.35L0 0" class="prefix__cls-1__search"
+                                        data-name="Line 128" transform="translate(16.65 16.65)" />
+                                </g>
+                            </svg>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="header__menu d-none d-lg-block">
+                    <ul class="d-flex">
+                        <li><a href="./index.html">خانه</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">حرکات تمرینی</a></li>
+                        <li class="header__menu--active"><a href="">مقالات</a></li>
+                        <li><a href="#">حرکات تمرینی</a></li>
+                        <li><a href="#">درباره</a></li>
+                    </ul>
+                </div>
+
+                <div class="header__logo">
+                    <a href="/" class="d-block"><img src="./assets/img/Logo@2x.png" width="100%" alt=""></a>
+                </div>
+
+                <!-- moblie search -->
+                <a href="#" class="d-lg-none">
+                    <div class="header__search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19.811" height="19.811"
+                            viewBox="0 0 19.811 19.811">
+                            <defs>
+                                <style>
+                                    .prefix__cls-1__x {
+                                        fill: none;
+                                        stroke: #959595;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                        stroke-width: 1.5px
+                                    }
+                                </style>
+                            </defs>
+                            <g id="prefix__search" transform="translate(-2.25 -2.25)">
+                                <circle id="prefix__Ellipse_122" cx="8" cy="8" r="8" class="prefix__cls-1__x"
+                                    data-name="Ellipse 122" transform="translate(3 3)" />
+                                <path id="prefix__Line_128" d="M4.35 4.35L0 0" class="prefix__cls-1__x"
+                                    data-name="Line 128" transform="translate(16.65 16.65)" />
+                            </g>
+                        </svg>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div id="mobileSlidingMenu" class="mobile-sliding-menu d-flex flex-column pt-4">
+
+            <div class="mobile-sliding-menu__header text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+                    <path
+                        d="M38 36a16.321 16.321 0 0 0-14.18 7.936A27.167 27.167 0 0 0 20 58c0 5.56-1.708 10.736-7.108 14.336A2 2 0 0 0 14 76a25.028 25.028 0 0 0 8.908-1.228 22.575 22.575 0 0 0 4.24-2.24 15.437 15.437 0 0 1-1.732 4.412C23.816 79.032 21.592 80 18 80a2 2 0 0 0 0 4c4.408 0 8.184-1.48 10.584-4.624S32 71.784 32 66a2 2 0 0 0-3.736-1 12.55 12.55 0 0 1-6.74 6.016 14.4 14.4 0 0 1-2.72.36A21.5 21.5 0 0 0 24 58a23.707 23.707 0 0 1 3.212-11.936A11.866 11.866 0 0 1 38 40a11.866 11.866 0 0 1 10.788 6.064A23.667 23.667 0 0 1 52 58a21.456 21.456 0 0 0 5.2 13.376 14.4 14.4 0 0 1-2.72-.36A12.527 12.527 0 0 1 47.736 65 2 2 0 0 0 44 66c0 5.784 1.02 10.1 2.76 13.148S51.18 84 54 84a2 2 0 0 0 0-4c-1.18 0-2.512-.652-3.76-2.84A16.983 16.983 0 0 1 48.548 72a24.167 24.167 0 0 0 4.544 2.772A25.028 25.028 0 0 0 62 76a2 2 0 0 0 1.108-3.664C57.708 68.736 56 63.56 56 58a27.167 27.167 0 0 0-3.82-14.064A16.321 16.321 0 0 0 38 36zm46-8c-7.572 0-12.8 3.392-15.86 7.572A21.733 21.733 0 0 0 64 48v8a16.681 16.681 0 0 0 2.24 8.18C67.3 66.132 68 67.4 68 68v6c0 1.98-1.36 4.16-5 6.264-3.984 2.3-9.984 5.68-14 8a9.671 9.671 0 0 0-4.392 5.2A13.459 13.459 0 0 0 44 98a2 2 0 0 0 4 0 9.968 9.968 0 0 1 .392-3.24A5.251 5.251 0 0 1 51 91.736c3.984-2.3 9.984-5.68 14-8 4.36-2.52 7-5.92 7-9.736v-6c0-2.388-1.3-3.992-2.24-5.728A12.223 12.223 0 0 1 68 56v-8a18.323 18.323 0 0 1 3.36-10.072C73.8 34.608 77.572 32 84 32s10.2 2.608 12.64 5.928A18.333 18.333 0 0 1 100 48v8a12.223 12.223 0 0 1-1.76 6.272C97.3 64.008 96 65.612 96 68v6a13.363 13.363 0 0 0 .624 4.92A9.559 9.559 0 0 0 101 83.736a2 2 0 0 0 2-3.472 5.128 5.128 0 0 1-2.624-2.74A10.56 10.56 0 0 1 100 74v-6c0-.6.7-1.868 1.76-3.82A16.694 16.694 0 0 0 104 56v-8a21.733 21.733 0 0 0-4.14-12.428C96.8 31.392 91.572 28 84 28zM60 0a60 60 0 1 0 60 60A60.032 60.032 0 0 0 60 0zm0 4A56 56 0 1 1 4 60 55.969 55.969 0 0 1 60 4z" />
+                </svg>
+                <div class="mobile-sliding-menu__login mt-2"><a href="#">وارد شوید</a></div>
+            </div>
+
+            <div class="mobile-sliding-menu__body mt-5">
+                <ul>
+                    <li class="mobile-sliding-menu__item--acitve"><a href="#">خانه</a></li>
+                    <li><a href="#">خدمات</a></li>
+                    <li><a href="#">حرکات تمرینی</a></li>
+                    <li><a href="#">مقالات</a></li>
+                    <li><a href="#">حرکات تمرینی</a></li>
+                    <li><a href="#">درباره</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-sliding-menu__footer mt-5">
+                <div><a href="#"> ورود </a></div>
+                <div>
+                    <a href="#">
+                        عضویت</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div id="mobileOverlay" class="mobile-overlay"></div>
+    </header>
+
+    <!-- mobile bottom nav menu -->
+    <nav class="mobile-nav-menu d-sm-none">
+        <ul class="d-flex justify-content-between align-items-center h-100 ">
+            <li>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.962" height="19.979" viewBox="0 0 19.962 19.979">
+                        <path id="prefix__user-circle"
+                            d="M12 2a10 10 0 0 0-7.35 16.76 10 10 0 0 0 14.7 0A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-5.55-2.25 6 6 0 0 1 11.1 0A8 8 0 0 1 12 20zm-2-10a2 2 0 1 1 2 2 2 2 0 0 1-2-2zm8.91 6A8 8 0 0 0 15 12.62a4 4 0 1 0-6 0A8 8 0 0 0 5.09 16 7.92 7.92 0 0 1 4 12a8 8 0 1 1 16 0 7.92 7.92 0 0 1-1.09 4z"
+                            transform="translate(-2.019 -2)" style="fill:#959595" />
+                    </svg>
+                </div>
+                <div>ورود</div>
+            </li>
+            <li>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20.02" height="19.928" viewBox="0 0 20.02 19.928">
+                        <path id="prefix__cell"
+                            d="M21.49 4.73L17 2.17a1 1 0 0 0-1 0l-4 2.28-4-2.28a1 1 0 0 0-1 0L2.51 4.73A1 1 0 0 0 2 5.6v5.12a1 1 0 0 0 .51.87l4 2.27v4.54a1 1 0 0 0 .51.87l4.5 2.56a1 1 0 0 0 1 0L17 19.27a1 1 0 0 0 .51-.87v-4.54l4-2.27a1 1 0 0 0 .51-.87V5.6a1 1 0 0 0-.53-.87zM4 10.14v-4l3.5-2 3.5 2v4l-3.5 2zm11.5 7.68l-3.5 2-3.5-2v-4l3.5-2 3.5 2zm4.5-7.68l-3.5 2-3.5-2v-4l3.5-2 3.5 2z"
+                            transform="translate(-2 -2.036)" style="fill:#959595" />
+                    </svg>
+
+                </div>
+                <div>خدمات</div>
+            </li>
+            <li>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.4" height="22.417" viewBox="0 0 19.4 22.417">
+                        <path id="prefix__Authorization_success"
+                            d="M363.955 1422.135c-.293-1.17-1.911-3.135-9.455-3.135-3.552 0-6.133.39-7.671 1.16-1.7.845-1.829 2.005-1.829 2.34v6.65a11.516 11.516 0 0 0 5.862 10.025l2.9 1.63a1.485 1.485 0 0 0 1.471 0l2.9-1.63A11.516 11.516 0 0 0 364 1429.15v-6.65a1.489 1.489 0 0 0-.045-.365zm-1.455 7.015a9.995 9.995 0 0 1-5.1 8.716l-2.9 1.634-2.9-1.635a9.994 9.994 0 0 1-5.1-8.715v-6.65s0-2 8-2c7.5 0 8 2 8 2zm-3.53-3.18l-4.97 4.97-2.969-2.97a.75.75 0 1 0-1.061 1.06l3.5 3.5a.75.75 0 0 0 1.06 0l5.5-5.5a.75.75 0 0 0-1.061-1.06z"
+                            data-name="Authorization success" transform="translate(-344.8 -1418.8)"
+                            style="fill:#959595;stroke:#959595;stroke-width:.4px;fill-rule:evenodd" />
+                    </svg>
+
+                </div>
+                <div>افراد موفق</div>
+            </li>
+            <li>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20.01" height="20.004" viewBox="0 0 20.01 20.004">
+                        <path id="prefix__dumbbell"
+                            d="M17.48 6.55l-2.84-2.84a1 1 0 0 0-1.42 1.41l2.12 2.12-8.1 8.1-2.12-2.12a1 1 0 1 0-1.41 1.42l2.81 2.81 2.81 2.81a1 1 0 1 0 1.42-1.41l-2.09-2.09 8.1-8.1 2.12 2.12a1 1 0 1 0 1.41-1.42zM3.71 17.46a1 1 0 0 0-1.42 1.42l2.83 2.83a1 1 0 1 0 1.42-1.42zm18-12.34l-2.83-2.83a1 1 0 0 0-1.42 1.42l2.83 2.83a1 1 0 1 0 1.42-1.42z"
+                            transform="translate(-1.996 -1.996)" style="fill:#959595" />
+                    </svg>
+
+                </div>
+                <div>حرکات تمرینی</div>
+            </li>
+            <li class="active">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20">
+                        <path id="prefix__file-alt"
+                            d="M9 10h1a1 1 0 0 0 0-2H9a1 1 0 0 0 0 2zm0 2a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2zm11-3.06a1.31 1.31 0 0 0-.06-.27v-.09a1.07 1.07 0 0 0-.19-.28l-6-6a1.07 1.07 0 0 0-.28-.19.32.32 0 0 0-.09 0 .88.88 0 0 0-.33-.11H7a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8.94zm-6-3.53L16.59 8H15a1 1 0 0 1-1-1zM18 19a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5v3a3 3 0 0 0 3 3h3zm-3-3H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2z"
+                            transform="translate(-4 -2)" style="fill:#959595;"></path>
+                    </svg>
+
+                </div>
+                <div>مقالات</div>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="mobile-call-menu d-sm-none">
+        <div class="d-flex flex-column justify-content-center align-items-center cursor--pointer ">
+            <div id="mobile-call-menu__btn"
+                class="mobile-call-menu__btn--big d-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31.947" height="31.947" viewBox="0 0 31.947 31.947">
+                    <path id="prefix__technology"
+                        d="M31.946 30.539a2.8 2.8 0 0 0-1.708-2.583l-7.959-3.386v-1.984a7.424 7.424 0 0 0 1.554-3.67h1.627a2.811 2.811 0 0 0 2.808-2.808v-4.025A2.812 2.812 0 0 0 25.85 9.3c-.2-6.09-3.607-9.3-9.878-9.3S6.3 3.213 6.095 9.3a2.812 2.812 0 0 0-2.417 2.78v4.025a2.811 2.811 0 0 0 2.808 2.808h1.626a7.422 7.422 0 0 0 1.554 3.67v1.987l-7.958 3.386A2.8 2.8 0 0 0 0 30.54v.471a.936.936 0 0 0 .936.936H31.01a.936.936 0 0 0 .936-.936zm-11.538-5.312a5.75 5.75 0 0 1-1.289 3.691 4.177 4.177 0 0 1-3.147 1.156 4.182 4.182 0 0 1-3.139-1.148 5.709 5.709 0 0 1-1.3-3.7V24.261a8.512 8.512 0 0 0 8.869 0V25.226zm1.62-7.748l-1.781 1.187a3.421 3.421 0 0 1-1.9.576h-1.586a.936.936 0 1 0 0 1.872h1.583a5.286 5.286 0 0 0 2.942-.891l.358-.239a5.9 5.9 0 0 1-5.672 3.653A5.775 5.775 0 0 1 9.917 17.9v-7.591c.369-1.715.9-2.806 1.548-3.155s1.574.014 2.476.364a5.816 5.816 0 0 0 2.031.531 5.639 5.639 0 0 0 2.021-.536c.9-.359 1.756-.7 2.387-.368.46.24 1.117.988 1.647 3.177zm4.368-5.4v4.025a.937.937 0 0 1-.936.936H23.9v-5.9h1.56a.937.937 0 0 1 .94.943zM9.636 4.164c1.3-1.521 3.428-2.293 6.337-2.293s5.041.771 6.337 2.293a8.206 8.206 0 0 1 1.666 5.11h-.287c-.565-2.007-1.35-3.221-2.442-3.79-1.392-.726-2.807-.164-3.944.288a4.7 4.7 0 0 1-1.33.4 4.907 4.907 0 0 1-1.353-.4c-1.177-.457-2.643-1.027-4.047-.265-1.059.575-1.825 1.811-2.333 3.766h-.27a8.2 8.2 0 0 1 1.666-5.11zM5.55 16.108v-4.025a.937.937 0 0 1 .936-.936h1.56v5.9H6.485a.937.937 0 0 1-.936-.936zM2.441 29.679l7.333-3.12a6.941 6.941 0 0 0 1.573 3.515H1.995a.934.934 0 0 1 .446-.4zm18.159.4a6.941 6.941 0 0 0 1.573-3.515l7.333 3.12a.935.935 0 0 1 .446.4zm0 0"
+                        transform="translate(.001)" style="fill:#fff" />
+                </svg>
+            </div>
+            <h5 class="font-weight-bold mt-2">مشاوره رایگان</h5>
+        </div>
+        <ul id="mobile-call-menu__hidden" class="mobile-call-menu__hidden">
+            <li class="mobile-call-menu__btn--phone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.468" height="22.508" viewBox="0 0 22.468 22.508">
+                    <path id="prefix__phone-call"
+                        d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        transform="translate(-1.361 -.172)"
+                        style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px" />
+                </svg>
+
+            </li>
+            <li class="mobile-call-menu__btn--whats">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28.949" height="28.949" viewBox="0 0 28.949 28.949">
+                    <path id="prefix__logo-whatsapp"
+                        d="M56.732 36.206a14.387 14.387 0 0 0-22.687 17.311L32 60.948l7.641-1.995A14.451 14.451 0 0 0 46.53 60.7h.006a14.4 14.4 0 0 0 14.413-14.347 14.228 14.228 0 0 0-4.218-10.147zm-10.2 22.071h-.002a12 12 0 0 1-6.1-1.662l-.43-.259-4.539 1.184 1.21-4.4-.285-.452a11.991 11.991 0 1 1 10.149 5.589zm6.571-8.93c-.36-.18-2.132-1.047-2.461-1.166s-.571-.18-.81.18-.931 1.163-1.141 1.405-.42.269-.78.089a9.852 9.852 0 0 1-2.9-1.779 10.808 10.808 0 0 1-2-2.483c-.21-.359-.023-.553.158-.731.162-.161.36-.419.54-.628a2.425 2.425 0 0 0 .36-.6.658.658 0 0 0-.03-.627c-.09-.179-.81-1.944-1.11-2.662-.293-.7-.589-.6-.81-.615s-.452-.013-.691-.013a1.327 1.327 0 0 0-.96.448 4.017 4.017 0 0 0-1.261 2.991 6.974 6.974 0 0 0 1.471 3.708 16.012 16.012 0 0 0 6.152 5.412 20.88 20.88 0 0 0 2.054.755 4.958 4.958 0 0 0 2.268.142 3.707 3.707 0 0 0 2.432-1.7 2.992 2.992 0 0 0 .21-1.7c-.087-.156-.327-.247-.688-.426z"
+                        transform="translate(-32 -31.999)" style="fill:#fff;fill-rule:evenodd" />
+                </svg>
+
+            </li>
+            <li class="mobile-call-menu__btn--insta">
+                <svg xmlns=" http://www.w3.org/2000/svg" width="26.585" height="26.585" viewBox="0 0 26.585 26.585">
+                    <path id="prefix__instagram"
+                        d="M13.293 0c-3.612 0-4.062.017-5.48.08A9.8 9.8 0 0 0 4.586.7a6.509 6.509 0 0 0-2.355 1.531A6.486 6.486 0 0 0 .7 4.586a9.773 9.773 0 0 0-.62 3.227C.013 9.231 0 9.681 0 13.293s.017 4.062.08 5.48A9.808 9.808 0 0 0 .7 22a6.519 6.519 0 0 0 1.533 2.355 6.5 6.5 0 0 0 2.355 1.533 9.814 9.814 0 0 0 3.227.618c1.418.066 1.869.08 5.48.08s4.062-.017 5.48-.08A9.836 9.836 0 0 0 22 25.887 6.793 6.793 0 0 0 25.887 22a9.808 9.808 0 0 0 .618-3.227c.066-1.418.08-1.869.08-5.48s-.017-4.062-.08-5.48a9.83 9.83 0 0 0-.618-3.227 6.524 6.524 0 0 0-1.533-2.355A6.477 6.477 0 0 0 22 .7a9.779 9.779 0 0 0-3.228-.62C17.354.013 16.9 0 13.293 0zm0 2.393c3.548 0 3.971.018 5.372.079a7.324 7.324 0 0 1 2.467.46 4.374 4.374 0 0 1 2.523 2.522 7.339 7.339 0 0 1 .457 2.467c.063 1.4.078 1.823.078 5.372s-.017 3.971-.082 5.372a7.481 7.481 0 0 1-.466 2.467 4.221 4.221 0 0 1-1 1.531 4.147 4.147 0 0 1-1.529.993 7.393 7.393 0 0 1-2.476.457c-1.411.063-1.827.078-5.382.078s-3.972-.017-5.382-.082a7.537 7.537 0 0 1-2.473-.467 4.116 4.116 0 0 1-1.528-1 4.036 4.036 0 0 1-1-1.529 7.544 7.544 0 0 1-.465-2.476c-.05-1.4-.068-1.827-.068-5.366s.022-3.971.071-5.38a7.535 7.535 0 0 1 .465-2.475 3.94 3.94 0 0 1 1-1.53A3.932 3.932 0 0 1 5.4 2.892a7.357 7.357 0 0 1 2.46-.466c1.412-.05 1.828-.066 5.382-.066l.05.033zm0 4.074a6.826 6.826 0 1 0 6.826 6.826 6.825 6.825 0 0 0-6.826-6.826zm0 11.257a4.431 4.431 0 1 1 4.431-4.431 4.43 4.43 0 0 1-4.431 4.43zM21.984 6.2a1.6 1.6 0 1 1-1.6-1.594 1.6 1.6 0 0 1 1.6 1.594z"
+                        style="fill:white;"></path>
+                </svg>
+            </li>
+            <li class="mobile-call-menu__btn--telegram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25.994" height="23.348" viewBox="0 0 25.994 23.348">
+                    <path id="prefix__telegram"
+                        d="M26.07 4a2.975 2.975 0 0 0-.934.223c-.285.113-1.641.684-3.7 1.547l-7.385 3.105c-5.3 2.231-10.5 4.426-10.5 4.426l.063-.024a3.207 3.207 0 0 0-.734.375 2.03 2.03 0 0 0-.586.566 1.664 1.664 0 0 0-.277 1.109 2.013 2.013 0 0 0 .895 1.395 2.971 2.971 0 0 0 .664.355h.008l4.883 1.645c.219.7 1.488 4.875 1.793 5.836a3.58 3.58 0 0 0 .574 1.207 1.413 1.413 0 0 0 .379.352 1.12 1.12 0 0 0 .184.086.168.168 0 0 0 .063.02l-.051-.012a.355.355 0 0 1 .039.02.776.776 0 0 0 .117.023 1.654 1.654 0 0 0 1.394-.246l.035-.027 2.883-2.625 4.823 3.707.109.047a2.566 2.566 0 0 0 2.566-.238 2.615 2.615 0 0 0 .754-1l.035-.09L27.9 6.656a2.749 2.749 0 0 0 .016-1.344 1.807 1.807 0 0 0-.781-1.047A1.872 1.872 0 0 0 26.07 4zm-.1 2.051a.584.584 0 0 1-.02.176v.012l-3.7 18.93a.426.426 0 0 1-.117.144c-.078.063-.141.1-.465-.027l-5.91-4.531L12.188 24l.75-4.789 9.656-9c.4-.371.266-.449.266-.449.027-.453-.6-.133-.6-.133l-12.178 7.547v-.02l-5.84-1.965h-.016a.269.269 0 0 0 .031-.012l.031-.016.031-.012 10.508-4.426c2.653-1.125 5.325-2.248 7.38-3.116s3.574-1.5 3.66-1.531.043-.031.102-.031z"
+                        transform="translate(-2 -3.994)" style="fill:#fff" />
+                </svg>
+
+            </li>
+        </ul>
+    </nav>
+
+    <main class="mb-5">
+        <!-- top slider -->
+        <div id="slick-articles" class="main-articles__top-slide">
+            <div class="main-articles__top-slide__item">
+                <div class="main-articles__top-slide__item__body">
+                    <div class="container h-100">
+                        <div class="col-8 col-md-7 h-100 d-flex flex-column justify-content-end pr-lg-4 pr-0">
+                            <h4>نکاتی که باید برای رسیدن به تناسب اندام انجام دهید</h4>
+                            <h2 class="mb-3 mt-2">تغذیه و تناسب اندام</h2>
+                            <p>
+                                برخی ها فکر می کنند تناسب اندام یعنی داشتن کمری باریک و اندامی لاغر، در صورتی که
+                                تناسب
+                                بدنی
+                                عملکرد قلب، شش ها و ماهیچه های بدن را شامل می شود و به طور ویژه ظرفیت قلبی ـ ریوی،
+                                نیروی
+                                عضلانی، استقامت عضلانی و انعطاف را مورد توجه قرار می دهد. بعلاوه تناسب از بعد روانی
+                                و
+                                احساسی
+                                ما را نیز متاًثر می سازد از آنجایی که آنچه بدن ما انجام می دهد روان و افکار ما را
+                                تحت
+                                تاًثیر قرار می
+                                .دهد
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-articles__top-slide__item__img">
+                        <img src="./assets/img/model-2@2x.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+                <div class="main-articles__top-slide__item__footer">
+                    <div class="container h-100">
+                        <div class="d-flex col-6 h-100 align-items-center">
+                            <div class="seperator seperator--50 d-none d-xl-flex"
+                                style="right: 29.5%;justify-content: normal;align-items: center;height: 50%;">
+                                <div style="height: 80%;"></div>
+                            </div>
+                            <div class="col-10 col-lg-4 px-0">
+                                <button class="btn btn--orange px-4 py-1">ادامه مطلب</button>
+                            </div>
+                            <div class="d-none d-xl-flex" style="width: 66%;">
+                                <div class="ml-1" style="color: #959595;">به اشتراک گذاری:</div>
+                                <div class="d-flex">
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__twitter-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm9.452 2.934A2.323 2.323 0 0 0 13.8 12.4a6.584 6.584 0 0 1-4.778-2.424 2.29 2.29 0 0 0-.314 1.17 2.317 2.317 0 0 0 1.033 1.931 2.317 2.317 0 0 1-1.047-.292v.027a2.321 2.321 0 0 0 1.857 2.279 2.484 2.484 0 0 1-1.047.043 2.322 2.322 0 0 0 2.168 1.609 4.65 4.65 0 0 1-2.879.99 4.94 4.94 0 0 1-.559-.027A6.607 6.607 0 0 0 18.4 12.145c0-.1 0-.2-.008-.3a4.864 4.864 0 0 0 1.162-1.2 4.6 4.6 0 0 1-1.337.355 2.313 2.313 0 0 0 1.019-1.278 4.561 4.561 0 0 1-1.472.559 2.312 2.312 0 0 0-1.695-.729z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__linkedin"
+                                                    d="M7.022 5A2.036 2.036 0 0 0 5 7.022v13.746a2.036 2.036 0 0 0 2.022 2.021h13.746a2.036 2.036 0 0 0 2.021-2.021V7.022A2.036 2.036 0 0 0 20.768 5zm0 1.617h13.746a.4.4 0 0 1 .4.4v13.751a.4.4 0 0 1-.4.4H7.022a.4.4 0 0 1-.4-.4V7.022a.4.4 0 0 1 .4-.405zM9.4 8.007a1.39 1.39 0 1 0 1.39 1.39 1.39 1.39 0 0 0-1.39-1.39zm7.3 3.693a2.494 2.494 0 0 0-2.249 1.238H14.4v-1.065h-2.274v7.682H14.5v-3.79c0-1 .2-1.971 1.44-1.971 1.222 0 1.238 1.131 1.238 2.021v3.74h2.375v-4.22c.002-2.066-.437-3.635-2.853-3.635zm-8.465.177v7.682h2.4v-7.686z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__whatsapp-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm7.277 1.617a5.625 5.625 0 0 0-5.66 5.66 5.513 5.513 0 0 0 .809 2.83l-.809 2.83 2.83-.728a5.463 5.463 0 0 0 2.83.728 5.66 5.66 0 0 0 0-11.32zm0 1.213a4.447 4.447 0 0 1 0 8.895 4.854 4.854 0 0 1-2.183-.565l-.4-.243-.486.161-.809.243.243-.809.161-.485-.242-.4a4.475 4.475 0 0 1 3.719-6.793zm-1.778 2.1a.324.324 0 0 0-.324.163 1.148 1.148 0 0 0-.485 1.05 2.5 2.5 0 0 0 .485 1.293A5.875 5.875 0 0 0 13.975 16a2.56 2.56 0 0 0 1.537.324c.243-.081.808-.324.889-.648s.082-.566.163-.4c0-.081-.082-.08-.243-.161a7.877 7.877 0 0 0-.889-.4c-.162 0-.243-.081-.324.081-.081.081-.323.4-.4.485s-.082.081-.243 0a3.652 3.652 0 0 1-1.778-1.535c-.081-.243.162-.243.4-.728.081-.081 0-.162 0-.243a5.856 5.856 0 0 1-.4-.97c-.162-.243-.243-.243-.324-.243z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-articles__top-slide__item">
+                <div class="main-articles__top-slide__item__body">
+                    <div class="container h-100">
+                        <div class="col-8 col-md-7 h-100 d-flex flex-column justify-content-end pr-lg-4 pr-0">
+                            <h4>نکاتی که باید برای رسیدن به تناسب اندام انجام دهید</h4>
+                            <h2 class="mb-3 mt-2">تغذیه و تناسب اندام</h2>
+                            <p>
+                                برخی ها فکر می کنند تناسب اندام یعنی داشتن کمری باریک و اندامی لاغر، در صورتی که
+                                تناسب
+                                بدنی
+                                عملکرد قلب، شش ها و ماهیچه های بدن را شامل می شود و به طور ویژه ظرفیت قلبی ـ ریوی،
+                                نیروی
+                                عضلانی، استقامت عضلانی و انعطاف را مورد توجه قرار می دهد. بعلاوه تناسب از بعد روانی
+                                و
+                                احساسی
+                                ما را نیز متاًثر می سازد از آنجایی که آنچه بدن ما انجام می دهد روان و افکار ما را
+                                تحت
+                                تاًثیر قرار می
+                                .دهد
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-articles__top-slide__item__img">
+                        <img src="./assets/img/model-2@2x.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+                <div class="main-articles__top-slide__item__footer">
+                    <div class="container h-100">
+                        <div class="d-flex col-6 h-100 align-items-center">
+                            <div class="seperator seperator--50 d-none d-xl-flex"
+                                style="right: 29.5%;justify-content: normal;align-items: center;height: 50%;">
+                                <div style="height: 80%;"></div>
+                            </div>
+                            <div class="col-10 col-lg-4 px-0">
+                                <button class="btn btn--orange px-4 py-1">ادامه مطلب</button>
+                            </div>
+                            <div class="d-none d-xl-flex" style="width: 66%;">
+                                <div class="ml-1" style="color: #959595;">به اشتراک گذاری:</div>                                <div class="d-flex">
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__twitter-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm9.452 2.934A2.323 2.323 0 0 0 13.8 12.4a6.584 6.584 0 0 1-4.778-2.424 2.29 2.29 0 0 0-.314 1.17 2.317 2.317 0 0 0 1.033 1.931 2.317 2.317 0 0 1-1.047-.292v.027a2.321 2.321 0 0 0 1.857 2.279 2.484 2.484 0 0 1-1.047.043 2.322 2.322 0 0 0 2.168 1.609 4.65 4.65 0 0 1-2.879.99 4.94 4.94 0 0 1-.559-.027A6.607 6.607 0 0 0 18.4 12.145c0-.1 0-.2-.008-.3a4.864 4.864 0 0 0 1.162-1.2 4.6 4.6 0 0 1-1.337.355 2.313 2.313 0 0 0 1.019-1.278 4.561 4.561 0 0 1-1.472.559 2.312 2.312 0 0 0-1.695-.729z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__linkedin"
+                                                    d="M7.022 5A2.036 2.036 0 0 0 5 7.022v13.746a2.036 2.036 0 0 0 2.022 2.021h13.746a2.036 2.036 0 0 0 2.021-2.021V7.022A2.036 2.036 0 0 0 20.768 5zm0 1.617h13.746a.4.4 0 0 1 .4.4v13.751a.4.4 0 0 1-.4.4H7.022a.4.4 0 0 1-.4-.4V7.022a.4.4 0 0 1 .4-.405zM9.4 8.007a1.39 1.39 0 1 0 1.39 1.39 1.39 1.39 0 0 0-1.39-1.39zm7.3 3.693a2.494 2.494 0 0 0-2.249 1.238H14.4v-1.065h-2.274v7.682H14.5v-3.79c0-1 .2-1.971 1.44-1.971 1.222 0 1.238 1.131 1.238 2.021v3.74h2.375v-4.22c.002-2.066-.437-3.635-2.853-3.635zm-8.465.177v7.682h2.4v-7.686z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__whatsapp-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm7.277 1.617a5.625 5.625 0 0 0-5.66 5.66 5.513 5.513 0 0 0 .809 2.83l-.809 2.83 2.83-.728a5.463 5.463 0 0 0 2.83.728 5.66 5.66 0 0 0 0-11.32zm0 1.213a4.447 4.447 0 0 1 0 8.895 4.854 4.854 0 0 1-2.183-.565l-.4-.243-.486.161-.809.243.243-.809.161-.485-.242-.4a4.475 4.475 0 0 1 3.719-6.793zm-1.778 2.1a.324.324 0 0 0-.324.163 1.148 1.148 0 0 0-.485 1.05 2.5 2.5 0 0 0 .485 1.293A5.875 5.875 0 0 0 13.975 16a2.56 2.56 0 0 0 1.537.324c.243-.081.808-.324.889-.648s.082-.566.163-.4c0-.081-.082-.08-.243-.161a7.877 7.877 0 0 0-.889-.4c-.162 0-.243-.081-.324.081-.081.081-.323.4-.4.485s-.082.081-.243 0a3.652 3.652 0 0 1-1.778-1.535c-.081-.243.162-.243.4-.728.081-.081 0-.162 0-.243a5.856 5.856 0 0 1-.4-.97c-.162-.243-.243-.243-.324-.243z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-articles__top-slide__item">
+                <div class="main-articles__top-slide__item__body">
+                    <div class="container h-100">
+                        <div class="col-8 col-md-7 h-100 d-flex flex-column justify-content-end pr-lg-4 pr-0">
+                            <h4>نکاتی که باید برای رسیدن به تناسب اندام انجام دهید</h4>
+                            <h2 class="mb-3 mt-2">تغذیه و تناسب اندام</h2>
+                            <p>
+                                برخی ها فکر می کنند تناسب اندام یعنی داشتن کمری باریک و اندامی لاغر، در صورتی که
+                                تناسب
+                                بدنی
+                                عملکرد قلب، شش ها و ماهیچه های بدن را شامل می شود و به طور ویژه ظرفیت قلبی ـ ریوی،
+                                نیروی
+                                عضلانی، استقامت عضلانی و انعطاف را مورد توجه قرار می دهد. بعلاوه تناسب از بعد روانی
+                                و
+                                احساسی
+                                ما را نیز متاًثر می سازد از آنجایی که آنچه بدن ما انجام می دهد روان و افکار ما را
+                                تحت
+                                تاًثیر قرار می
+                                .دهد
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-articles__top-slide__item__img">
+                        <img src="./assets/img/model-2@2x.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+                <div class="main-articles__top-slide__item__footer">
+                    <div class="container h-100">
+                        <div class="d-flex col-6 h-100 align-items-center">
+                            <div class="seperator seperator--50 d-none d-xl-flex"
+                                style="right: 29.5%;justify-content: normal;align-items: center;height: 50%;">
+                                <div style="height: 80%;"></div>
+                            </div>
+                            <div class="col-10 col-lg-4 px-0">
+                                <button class="btn btn--orange px-4 py-1">ادامه مطلب</button>
+                            </div>
+                            <div class="d-none d-xl-flex" style="width: 66%;">
+                                <div class="ml-1" style="color: #959595;">به اشتراک گذاری:</div>
+                                <div class="d-flex">
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__twitter-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm9.452 2.934A2.323 2.323 0 0 0 13.8 12.4a6.584 6.584 0 0 1-4.778-2.424 2.29 2.29 0 0 0-.314 1.17 2.317 2.317 0 0 0 1.033 1.931 2.317 2.317 0 0 1-1.047-.292v.027a2.321 2.321 0 0 0 1.857 2.279 2.484 2.484 0 0 1-1.047.043 2.322 2.322 0 0 0 2.168 1.609 4.65 4.65 0 0 1-2.879.99 4.94 4.94 0 0 1-.559-.027A6.607 6.607 0 0 0 18.4 12.145c0-.1 0-.2-.008-.3a4.864 4.864 0 0 0 1.162-1.2 4.6 4.6 0 0 1-1.337.355 2.313 2.313 0 0 0 1.019-1.278 4.561 4.561 0 0 1-1.472.559 2.312 2.312 0 0 0-1.695-.729z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__linkedin"
+                                                    d="M7.022 5A2.036 2.036 0 0 0 5 7.022v13.746a2.036 2.036 0 0 0 2.022 2.021h13.746a2.036 2.036 0 0 0 2.021-2.021V7.022A2.036 2.036 0 0 0 20.768 5zm0 1.617h13.746a.4.4 0 0 1 .4.4v13.751a.4.4 0 0 1-.4.4H7.022a.4.4 0 0 1-.4-.4V7.022a.4.4 0 0 1 .4-.405zM9.4 8.007a1.39 1.39 0 1 0 1.39 1.39 1.39 1.39 0 0 0-1.39-1.39zm7.3 3.693a2.494 2.494 0 0 0-2.249 1.238H14.4v-1.065h-2.274v7.682H14.5v-3.79c0-1 .2-1.971 1.44-1.971 1.222 0 1.238 1.131 1.238 2.021v3.74h2.375v-4.22c.002-2.066-.437-3.635-2.853-3.635zm-8.465.177v7.682h2.4v-7.686z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__whatsapp-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm7.277 1.617a5.625 5.625 0 0 0-5.66 5.66 5.513 5.513 0 0 0 .809 2.83l-.809 2.83 2.83-.728a5.463 5.463 0 0 0 2.83.728 5.66 5.66 0 0 0 0-11.32zm0 1.213a4.447 4.447 0 0 1 0 8.895 4.854 4.854 0 0 1-2.183-.565l-.4-.243-.486.161-.809.243.243-.809.161-.485-.242-.4a4.475 4.475 0 0 1 3.719-6.793zm-1.778 2.1a.324.324 0 0 0-.324.163 1.148 1.148 0 0 0-.485 1.05 2.5 2.5 0 0 0 .485 1.293A5.875 5.875 0 0 0 13.975 16a2.56 2.56 0 0 0 1.537.324c.243-.081.808-.324.889-.648s.082-.566.163-.4c0-.081-.082-.08-.243-.161a7.877 7.877 0 0 0-.889-.4c-.162 0-.243-.081-.324.081-.081.081-.323.4-.4.485s-.082.081-.243 0a3.652 3.652 0 0 1-1.778-1.535c-.081-.243.162-.243.4-.728.081-.081 0-.162 0-.243a5.856 5.856 0 0 1-.4-.97c-.162-.243-.243-.243-.324-.243z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-articles__top-slide__item">
+                <div class="main-articles__top-slide__item__body">
+                    <div class="container h-100">
+                        <div class="col-8 col-md-7 h-100 d-flex flex-column justify-content-end pr-lg-4 pr-0">
+                            <h4>نکاتی که باید برای رسیدن به تناسب اندام انجام دهید</h4>
+                            <h2 class="mb-3 mt-2">تغذیه و تناسب اندام</h2>
+                            <p>
+                                برخی ها فکر می کنند تناسب اندام یعنی داشتن کمری باریک و اندامی لاغر، در صورتی که
+                                تناسب
+                                بدنی
+                                عملکرد قلب، شش ها و ماهیچه های بدن را شامل می شود و به طور ویژه ظرفیت قلبی ـ ریوی،
+                                نیروی
+                                عضلانی، استقامت عضلانی و انعطاف را مورد توجه قرار می دهد. بعلاوه تناسب از بعد روانی
+                                و
+                                احساسی
+                                ما را نیز متاًثر می سازد از آنجایی که آنچه بدن ما انجام می دهد روان و افکار ما را
+                                تحت
+                                تاًثیر قرار می
+                                .دهد
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-articles__top-slide__item__img">
+                        <img src="./assets/img/model-2@2x.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+                <div class="main-articles__top-slide__item__footer">
+                    <div class="container h-100">
+                        <div class="d-flex col-6 h-100 align-items-center">
+                            <div class="seperator seperator--50 d-none d-xl-flex"
+                                style="right: 29.5%;justify-content: normal;align-items: center;height: 50%;">
+                                <div style="height: 80%;"></div>
+                            </div>
+                            <div class="col-10 col-lg-4 px-0">
+                                <button class="btn btn--orange px-4 py-1">ادامه مطلب</button>
+                            </div>
+                            <div class="d-none d-xl-flex" style="width: 66%;">
+                                <div class="ml-1" style="color: #959595;">به اشتراک گذاری:</div>                                <div class="d-flex">
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__twitter-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm9.452 2.934A2.323 2.323 0 0 0 13.8 12.4a6.584 6.584 0 0 1-4.778-2.424 2.29 2.29 0 0 0-.314 1.17 2.317 2.317 0 0 0 1.033 1.931 2.317 2.317 0 0 1-1.047-.292v.027a2.321 2.321 0 0 0 1.857 2.279 2.484 2.484 0 0 1-1.047.043 2.322 2.322 0 0 0 2.168 1.609 4.65 4.65 0 0 1-2.879.99 4.94 4.94 0 0 1-.559-.027A6.607 6.607 0 0 0 18.4 12.145c0-.1 0-.2-.008-.3a4.864 4.864 0 0 0 1.162-1.2 4.6 4.6 0 0 1-1.337.355 2.313 2.313 0 0 0 1.019-1.278 4.561 4.561 0 0 1-1.472.559 2.312 2.312 0 0 0-1.695-.729z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__linkedin"
+                                                    d="M7.022 5A2.036 2.036 0 0 0 5 7.022v13.746a2.036 2.036 0 0 0 2.022 2.021h13.746a2.036 2.036 0 0 0 2.021-2.021V7.022A2.036 2.036 0 0 0 20.768 5zm0 1.617h13.746a.4.4 0 0 1 .4.4v13.751a.4.4 0 0 1-.4.4H7.022a.4.4 0 0 1-.4-.4V7.022a.4.4 0 0 1 .4-.405zM9.4 8.007a1.39 1.39 0 1 0 1.39 1.39 1.39 1.39 0 0 0-1.39-1.39zm7.3 3.693a2.494 2.494 0 0 0-2.249 1.238H14.4v-1.065h-2.274v7.682H14.5v-3.79c0-1 .2-1.971 1.44-1.971 1.222 0 1.238 1.131 1.238 2.021v3.74h2.375v-4.22c.002-2.066-.437-3.635-2.853-3.635zm-8.465.177v7.682h2.4v-7.686z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__facebook-square"
+                                                    d="M6.617 5A1.629 1.629 0 0 0 5 6.617v14.555a1.629 1.629 0 0 0 1.617 1.617h14.555a1.628 1.628 0 0 0 1.617-1.617V6.617A1.629 1.629 0 0 0 21.172 5zm0 1.617h14.555v14.555h-4.195v-5.458h2.1l.3-2.426h-2.4v-1.567c0-.708.174-1.188 1.188-1.188h1.314v-2.2c-.224-.028-1-.076-1.9-.076a2.924 2.924 0 0 0-3.133 3.209v1.819h-2.118v2.426h2.123v5.458H6.617z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                    <div class="mx-2"><a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.789" height="17.789"
+                                                viewBox="0 0 17.789 17.789">
+                                                <path id="prefix__whatsapp-square"
+                                                    d="M5 5v17.789h17.789V5zm1.617 1.617h14.555v14.555H6.617zm7.277 1.617a5.625 5.625 0 0 0-5.66 5.66 5.513 5.513 0 0 0 .809 2.83l-.809 2.83 2.83-.728a5.463 5.463 0 0 0 2.83.728 5.66 5.66 0 0 0 0-11.32zm0 1.213a4.447 4.447 0 0 1 0 8.895 4.854 4.854 0 0 1-2.183-.565l-.4-.243-.486.161-.809.243.243-.809.161-.485-.242-.4a4.475 4.475 0 0 1 3.719-6.793zm-1.778 2.1a.324.324 0 0 0-.324.163 1.148 1.148 0 0 0-.485 1.05 2.5 2.5 0 0 0 .485 1.293A5.875 5.875 0 0 0 13.975 16a2.56 2.56 0 0 0 1.537.324c.243-.081.808-.324.889-.648s.082-.566.163-.4c0-.081-.082-.08-.243-.161a7.877 7.877 0 0 0-.889-.4c-.162 0-.243-.081-.324.081-.081.081-.323.4-.4.485s-.082.081-.243 0a3.652 3.652 0 0 1-1.778-1.535c-.081-.243.162-.243.4-.728.081-.081 0-.162 0-.243a5.856 5.856 0 0 1-.4-.97c-.162-.243-.243-.243-.324-.243z"
+                                                    transform="translate(-5 -5)" style="fill:#ccc" />
+                                            </svg>
+
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- body -->
+        <div class="main-articles__body d-flex flex-wrap container">
+
+
+            <!-- articles list -->
+            <section class="col-12 col-lg-9 main-articles__body__section px-0 px-sm-3">
+                <article class="ml-lg-5 border-bottom pb-4 mb-4">
+                    <h2 class="main-articles__body__section__header mb-4 mb-lg-0">
+                        آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ با نکات کاربردی،آموزش طراحی ناخن شیک و رنگارنگ با نکات
+                        کاربردی
+                    </h2>
+                    <div class="d-none d-lg-flex my-3 mb-4" style="color: #959595">
+                        <div><a href="#">
+                                تغذیه /
+                            </a></div>
+                        <div class="mr-2">
+                            ۱۲ اردبیهشت ۱۳۹۹
+                        </div>
+                    </div>
+                    <div class="main-articles__body__section__img">
+                        <img src="./assets/img/xx.webp" alt="">
+                    </div>
+                    <div class="mt-4 mb-5">
+                        <p style="color: #6f6f6f">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
+                            شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها
+                            شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+                            سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="w-100 w-lg-100">
+                            <button class="btn btn--orange">ادامه مطلب</button>
+                        </div>
+
+                        <div class="d-none d-lg-flex">
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-heart"
+                                            d="M18.016 12.16a4.912 4.912 0 0 0-5.664.848 4.8 4.8 0 0 0 0 6.784L16.88 24.4a1.6 1.6 0 0 0 2.272 0l4.528-4.528a4.8 4.8 0 0 0 0-6.784 4.912 4.912 0 0 0-5.664-.928zm3.392 5.376l-3.392 3.392-3.392-3.392a1.6 1.6 0 1 1 2.256-2.272 1.6 1.6 0 0 0 2.272 0 1.6 1.6 0 1 1 2.256 2.272zM18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mx-4">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-message"
+                                            d="M18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744zm8-14.4h-16a1.6 1.6 0 0 0 0 3.2h16a1.6 1.6 0 1 0 0-3.2zm-3.2 6.4h-9.6a1.6 1.6 0 0 0 0 3.2h9.6a1.6 1.6 0 0 0 0-3.2zm-9.6-9.6h9.6a1.6 1.6 0 0 0 0-3.2h-9.6a1.6 1.6 0 0 0 0 3.2z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+                                        <path id="prefix__comment-share"
+                                            d="M28.934 20.116a1.583 1.583 0 0 0-1.753 1.392A11.1 11.1 0 0 1 16.209 31.3H7.383l1.01-1.008a1.615 1.615 0 0 0 0-2.256A11.3 11.3 0 0 1 5.53 17.155a11.124 11.124 0 0 1 7.916-7.9A1.6 1.6 0 0 0 14.582 7.3a1.58 1.58 0 0 0-1.926-1.152 14.289 14.289 0 0 0-9.9 9.406 14.553 14.553 0 0 0 2.4 13.538l-2.7 2.672a1.616 1.616 0 0 0-.332 1.744 1.579 1.579 0 0 0 1.453.992h12.632a14.276 14.276 0 0 0 14.1-12.608 1.6 1.6 0 0 0-1.375-1.776zm-.095-9.616a3.13 3.13 0 0 0-1.863.624l-2.763-1.28 3.047-1.408a3.127 3.127 0 0 0 1.579.464 3.2 3.2 0 1 0-3.158-3.2l-3 1.392a3.13 3.13 0 0 0-1.736-.592 3.2 3.2 0 0 0 0 6.4 3.125 3.125 0 0 0 1.468-.384l3.3 1.6a3.16 3.16 0 1 0 3.126-3.616z"
+                                            transform="translate(-2.002 -2.5)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="ml-lg-5 border-bottom pb-4 mb-4">
+                    <h2 class="main-articles__body__section__header mb-4 mb-lg-0">
+                        آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ با نکات کاربردی،آموزش طراحی ناخن شیک و رنگارنگ با نکات
+                        کاربردی
+                    </h2>
+                    <div class="d-none d-lg-flex my-3 mb-4" style="color: #959595">
+                        <div><a href="#">
+                                تغذیه /
+                            </a></div>
+                        <div class="mr-2">
+                            ۱۲ اردبیهشت ۱۳۹۹
+                        </div>
+                    </div>
+                    <div class="main-articles__body__section__img">
+                        <img src="./assets/img/xx.webp" alt="">
+                    </div>
+                    <div class="mt-4 mb-5">
+                        <p style="color: #6f6f6f">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
+                            شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها
+                            شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+                            سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="w-100 w-lg-100">
+                            <button class="btn btn--orange">ادامه مطلب</button>
+                        </div>
+
+                        <div class="d-none d-lg-flex">
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-heart"
+                                            d="M18.016 12.16a4.912 4.912 0 0 0-5.664.848 4.8 4.8 0 0 0 0 6.784L16.88 24.4a1.6 1.6 0 0 0 2.272 0l4.528-4.528a4.8 4.8 0 0 0 0-6.784 4.912 4.912 0 0 0-5.664-.928zm3.392 5.376l-3.392 3.392-3.392-3.392a1.6 1.6 0 1 1 2.256-2.272 1.6 1.6 0 0 0 2.272 0 1.6 1.6 0 1 1 2.256 2.272zM18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mx-4">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-message"
+                                            d="M18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744zm8-14.4h-16a1.6 1.6 0 0 0 0 3.2h16a1.6 1.6 0 1 0 0-3.2zm-3.2 6.4h-9.6a1.6 1.6 0 0 0 0 3.2h9.6a1.6 1.6 0 0 0 0-3.2zm-9.6-9.6h9.6a1.6 1.6 0 0 0 0-3.2h-9.6a1.6 1.6 0 0 0 0 3.2z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+                                        <path id="prefix__comment-share"
+                                            d="M28.934 20.116a1.583 1.583 0 0 0-1.753 1.392A11.1 11.1 0 0 1 16.209 31.3H7.383l1.01-1.008a1.615 1.615 0 0 0 0-2.256A11.3 11.3 0 0 1 5.53 17.155a11.124 11.124 0 0 1 7.916-7.9A1.6 1.6 0 0 0 14.582 7.3a1.58 1.58 0 0 0-1.926-1.152 14.289 14.289 0 0 0-9.9 9.406 14.553 14.553 0 0 0 2.4 13.538l-2.7 2.672a1.616 1.616 0 0 0-.332 1.744 1.579 1.579 0 0 0 1.453.992h12.632a14.276 14.276 0 0 0 14.1-12.608 1.6 1.6 0 0 0-1.375-1.776zm-.095-9.616a3.13 3.13 0 0 0-1.863.624l-2.763-1.28 3.047-1.408a3.127 3.127 0 0 0 1.579.464 3.2 3.2 0 1 0-3.158-3.2l-3 1.392a3.13 3.13 0 0 0-1.736-.592 3.2 3.2 0 0 0 0 6.4 3.125 3.125 0 0 0 1.468-.384l3.3 1.6a3.16 3.16 0 1 0 3.126-3.616z"
+                                            transform="translate(-2.002 -2.5)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="ml-lg-5 border-bottom pb-4 mb-4">
+                    <h2 class="main-articles__body__section__header mb-4 mb-lg-0">
+                        آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ با نکات کاربردی،آموزش طراحی ناخن شیک و رنگارنگ با نکات
+                        کاربردی
+                    </h2>
+                    <div class="d-none d-lg-flex my-3 mb-4" style="color: #959595">
+                        <div><a href="#">
+                                تغذیه /
+                            </a></div>
+                        <div class="mr-2">
+                            ۱۲ اردبیهشت ۱۳۹۹
+                        </div>
+                    </div>
+                    <div class="main-articles__body__section__img">
+                        <img src="./assets/img/xx.webp" alt="">
+                    </div>
+                    <div class="mt-4 mb-5">
+                        <p style="color: #6f6f6f">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
+                            شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها
+                            شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+                            سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="w-100 w-lg-100">
+                            <button class="btn btn--orange">ادامه مطلب</button>
+                        </div>
+
+                        <div class="d-none d-lg-flex">
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-heart"
+                                            d="M18.016 12.16a4.912 4.912 0 0 0-5.664.848 4.8 4.8 0 0 0 0 6.784L16.88 24.4a1.6 1.6 0 0 0 2.272 0l4.528-4.528a4.8 4.8 0 0 0 0-6.784 4.912 4.912 0 0 0-5.664-.928zm3.392 5.376l-3.392 3.392-3.392-3.392a1.6 1.6 0 1 1 2.256-2.272 1.6 1.6 0 0 0 2.272 0 1.6 1.6 0 1 1 2.256 2.272zM18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mx-4">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-message"
+                                            d="M18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744zm8-14.4h-16a1.6 1.6 0 0 0 0 3.2h16a1.6 1.6 0 1 0 0-3.2zm-3.2 6.4h-9.6a1.6 1.6 0 0 0 0 3.2h9.6a1.6 1.6 0 0 0 0-3.2zm-9.6-9.6h9.6a1.6 1.6 0 0 0 0-3.2h-9.6a1.6 1.6 0 0 0 0 3.2z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+                                        <path id="prefix__comment-share"
+                                            d="M28.934 20.116a1.583 1.583 0 0 0-1.753 1.392A11.1 11.1 0 0 1 16.209 31.3H7.383l1.01-1.008a1.615 1.615 0 0 0 0-2.256A11.3 11.3 0 0 1 5.53 17.155a11.124 11.124 0 0 1 7.916-7.9A1.6 1.6 0 0 0 14.582 7.3a1.58 1.58 0 0 0-1.926-1.152 14.289 14.289 0 0 0-9.9 9.406 14.553 14.553 0 0 0 2.4 13.538l-2.7 2.672a1.616 1.616 0 0 0-.332 1.744 1.579 1.579 0 0 0 1.453.992h12.632a14.276 14.276 0 0 0 14.1-12.608 1.6 1.6 0 0 0-1.375-1.776zm-.095-9.616a3.13 3.13 0 0 0-1.863.624l-2.763-1.28 3.047-1.408a3.127 3.127 0 0 0 1.579.464 3.2 3.2 0 1 0-3.158-3.2l-3 1.392a3.13 3.13 0 0 0-1.736-.592 3.2 3.2 0 0 0 0 6.4 3.125 3.125 0 0 0 1.468-.384l3.3 1.6a3.16 3.16 0 1 0 3.126-3.616z"
+                                            transform="translate(-2.002 -2.5)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="ml-lg-5 border-bottom pb-4 mb-4">
+                    <h2 class="main-articles__body__section__header mb-4 mb-lg-0">
+                        آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ با نکات کاربردی،آموزش طراحی ناخن شیک و رنگارنگ با نکات
+                        کاربردی
+                    </h2>
+                    <div class="d-none d-lg-flex my-3 mb-4" style="color: #959595">
+                        <div><a href="#">
+                                تغذیه /
+                            </a></div>
+                        <div class="mr-2">
+                            ۱۲ اردبیهشت ۱۳۹۹
+                        </div>
+                    </div>
+                    <div class="main-articles__body__section__img">
+                        <img src="./assets/img/xx.webp" alt="">
+                    </div>
+                    <div class="mt-4 mb-5">
+                        <p style="color: #6f6f6f">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
+                            شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها
+                            شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+                            سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="w-100 w-lg-100">
+                            <button class="btn btn--orange">ادامه مطلب</button>
+                        </div>
+
+                        <div class="d-none d-lg-flex">
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-heart"
+                                            d="M18.016 12.16a4.912 4.912 0 0 0-5.664.848 4.8 4.8 0 0 0 0 6.784L16.88 24.4a1.6 1.6 0 0 0 2.272 0l4.528-4.528a4.8 4.8 0 0 0 0-6.784 4.912 4.912 0 0 0-5.664-.928zm3.392 5.376l-3.392 3.392-3.392-3.392a1.6 1.6 0 1 1 2.256-2.272 1.6 1.6 0 0 0 2.272 0 1.6 1.6 0 1 1 2.256 2.272zM18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mx-4">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-message"
+                                            d="M18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744zm8-14.4h-16a1.6 1.6 0 0 0 0 3.2h16a1.6 1.6 0 1 0 0-3.2zm-3.2 6.4h-9.6a1.6 1.6 0 0 0 0 3.2h9.6a1.6 1.6 0 0 0 0-3.2zm-9.6-9.6h9.6a1.6 1.6 0 0 0 0-3.2h-9.6a1.6 1.6 0 0 0 0 3.2z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+                                        <path id="prefix__comment-share"
+                                            d="M28.934 20.116a1.583 1.583 0 0 0-1.753 1.392A11.1 11.1 0 0 1 16.209 31.3H7.383l1.01-1.008a1.615 1.615 0 0 0 0-2.256A11.3 11.3 0 0 1 5.53 17.155a11.124 11.124 0 0 1 7.916-7.9A1.6 1.6 0 0 0 14.582 7.3a1.58 1.58 0 0 0-1.926-1.152 14.289 14.289 0 0 0-9.9 9.406 14.553 14.553 0 0 0 2.4 13.538l-2.7 2.672a1.616 1.616 0 0 0-.332 1.744 1.579 1.579 0 0 0 1.453.992h12.632a14.276 14.276 0 0 0 14.1-12.608 1.6 1.6 0 0 0-1.375-1.776zm-.095-9.616a3.13 3.13 0 0 0-1.863.624l-2.763-1.28 3.047-1.408a3.127 3.127 0 0 0 1.579.464 3.2 3.2 0 1 0-3.158-3.2l-3 1.392a3.13 3.13 0 0 0-1.736-.592 3.2 3.2 0 0 0 0 6.4 3.125 3.125 0 0 0 1.468-.384l3.3 1.6a3.16 3.16 0 1 0 3.126-3.616z"
+                                            transform="translate(-2.002 -2.5)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="ml-lg-5 border-bottom pb-4 mb-4">
+                    <h2 class="main-articles__body__section__header mb-4 mb-lg-0">
+                        آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ با نکات کاربردی،آموزش طراحی ناخن شیک و رنگارنگ با نکات
+                        کاربردی
+                    </h2>
+                    <div class="d-none d-lg-flex my-3 mb-4" style="color: #959595">
+                        <div><a href="#">
+                                تغذیه /
+                            </a></div>
+                        <div class="mr-2">
+                            ۱۲ اردبیهشت ۱۳۹۹
+                        </div>
+                    </div>
+                    <div class="main-articles__body__section__img">
+                        <img src="./assets/img/xx.webp" alt="">
+                    </div>
+                    <div class="mt-4 mb-5">
+                        <p style="color: #6f6f6f">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
+                            شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها
+                            شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+                            سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="w-100 w-lg-100">
+                            <button class="btn btn--orange">ادامه مطلب</button>
+                        </div>
+
+                        <div class="d-none d-lg-flex">
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-heart"
+                                            d="M18.016 12.16a4.912 4.912 0 0 0-5.664.848 4.8 4.8 0 0 0 0 6.784L16.88 24.4a1.6 1.6 0 0 0 2.272 0l4.528-4.528a4.8 4.8 0 0 0 0-6.784 4.912 4.912 0 0 0-5.664-.928zm3.392 5.376l-3.392 3.392-3.392-3.392a1.6 1.6 0 1 1 2.256-2.272 1.6 1.6 0 0 0 2.272 0 1.6 1.6 0 1 1 2.256 2.272zM18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mx-4">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32.044" height="32"
+                                        viewBox="0 0 32.044 32">
+                                        <path id="prefix__comment-message"
+                                            d="M18.016 2a16 16 0 0 0-16 16 15.823 15.823 0 0 0 3.617 10.127l-3.2 3.2A1.56 1.56 0 0 0 3.617 34h14.4a16 16 0 1 0 0-32zm0 28.8H7.473l1.488-1.488a1.6 1.6 0 0 0 0-2.256 12.8 12.8 0 1 1 9.055 3.744zm8-14.4h-16a1.6 1.6 0 0 0 0 3.2h16a1.6 1.6 0 1 0 0-3.2zm-3.2 6.4h-9.6a1.6 1.6 0 0 0 0 3.2h9.6a1.6 1.6 0 0 0 0-3.2zm-9.6-9.6h9.6a1.6 1.6 0 0 0 0-3.2h-9.6a1.6 1.6 0 0 0 0 3.2z"
+                                            transform="translate(-1.972 -2)" style="fill:#ccc" />
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="color: #959595; font-weight: bold; margin-left: 8px;">
+
+                                    ۱۲
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+                                        <path id="prefix__comment-share"
+                                            d="M28.934 20.116a1.583 1.583 0 0 0-1.753 1.392A11.1 11.1 0 0 1 16.209 31.3H7.383l1.01-1.008a1.615 1.615 0 0 0 0-2.256A11.3 11.3 0 0 1 5.53 17.155a11.124 11.124 0 0 1 7.916-7.9A1.6 1.6 0 0 0 14.582 7.3a1.58 1.58 0 0 0-1.926-1.152 14.289 14.289 0 0 0-9.9 9.406 14.553 14.553 0 0 0 2.4 13.538l-2.7 2.672a1.616 1.616 0 0 0-.332 1.744 1.579 1.579 0 0 0 1.453.992h12.632a14.276 14.276 0 0 0 14.1-12.608 1.6 1.6 0 0 0-1.375-1.776zm-.095-9.616a3.13 3.13 0 0 0-1.863.624l-2.763-1.28 3.047-1.408a3.127 3.127 0 0 0 1.579.464 3.2 3.2 0 1 0-3.158-3.2l-3 1.392a3.13 3.13 0 0 0-1.736-.592 3.2 3.2 0 0 0 0 6.4 3.125 3.125 0 0 0 1.468-.384l3.3 1.6a3.16 3.16 0 1 0 3.126-3.616z"
+                                            transform="translate(-2.002 -2.5)" style="fill:#ccc" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <div
+                    class="main-articles__body__section__pageNo d-flex flex-row-reverse justify-content-center align-items-center mt-lg-5 pt-4 mb-5 mb-lg-0">
+                    <div>
+                        >
+                    </div>
+                    <div class="active">۱</div>
+                    <div>۲</div>
+                    <div>۳</div>
+                    <div>۴</div>
+                    <div>۵</div>
+                    <div>
+                        < </div>
+
+                    </div>
+            </section>
+            <!-- side menu -->
+            <aside class="col-12 col-lg-3 main-articles__body__aside px-lg-0">
+                <div class="fav mb-5">
+                    <header class="font-weight-bold border-bottom">
+                        محبوب‌ترین مطالب
+                    </header>
+                    <main>
+                        <section class="d-flex px-2 py-3 border-bottom">
+                            <div style="width: 80px; height: 80px; margin-left: 15px;">
+                                <img src="./assets/img/healthy-woman-running-with-blurred-background-23-2147600427@2x.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4 style="font-size: .85em; font-weight: bold;">آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ
+                                    با نکات کاربردی</h4>
+                                <div class="mt-3" style="font-size: .7em; color:#959595;">
+                                    ۱۲
+                                    اردیبهشت ۱۳۹۹</div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex px-2 py-3 border-bottom">
+                            <div style="width: 80px; height: 80px; margin-left: 15px;">
+                                <img src="./assets/img/healthy-woman-running-with-blurred-background-23-2147600427@2x.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4 style="font-size: .85em; font-weight: bold;">آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ
+                                    با نکات کاربردی</h4>
+                                <div class="mt-3" style="font-size: .7em; color:#959595;">
+                                    ۱۲
+                                    اردیبهشت ۱۳۹۹</div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex px-2 py-3 border-bottom">
+                            <div style="width: 80px; height: 80px; margin-left: 15px;">
+                                <img src="./assets/img/healthy-woman-running-with-blurred-background-23-2147600427@2x.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4 style="font-size: .85em; font-weight: bold;">آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ
+                                    با نکات کاربردی</h4>
+                                <div class="mt-3" style="font-size: .7em; color:#959595;">
+                                    ۱۲
+                                    اردیبهشت ۱۳۹۹</div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex px-2 py-3 border-bottom">
+                            <div style="width: 80px; height: 80px; margin-left: 15px;">
+                                <img src="./assets/img/healthy-woman-running-with-blurred-background-23-2147600427@2x.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4 style="font-size: .85em; font-weight: bold;">آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ
+                                    با نکات کاربردی</h4>
+                                <div class="mt-3" style="font-size: .7em; color:#959595;">
+                                    ۱۲
+                                    اردیبهشت ۱۳۹۹</div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex px-2 py-3 border-bottom">
+                            <div style="width: 80px; height: 80px; margin-left: 15px;">
+                                <img src="./assets/img/healthy-woman-running-with-blurred-background-23-2147600427@2x.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4 style="font-size: .85em; font-weight: bold;">آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ
+                                    با نکات کاربردی</h4>
+                                <div class="mt-3" style="font-size: .7em; color:#959595;">
+                                    ۱۲
+                                    اردیبهشت ۱۳۹۹</div>
+                            </div>
+                        </section>
+
+                        <section class="d-flex px-2 py-3 border-bottom">
+                            <div style="width: 80px; height: 80px; margin-left: 15px;">
+                                <img src="./assets/img/healthy-woman-running-with-blurred-background-23-2147600427@2x.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <h4 style="font-size: .85em; font-weight: bold;">آموزش ۳۰ نوع طراحی ناخن شیک و رنگارنگ
+                                    با نکات کاربردی</h4>
+                                <div class="mt-3" style="font-size: .7em; color:#959595;">
+                                    ۱۲
+                                    اردیبهشت ۱۳۹۹</div>
+                            </div>
+                        </section>
+
+                    </main>
+                </div>
+
+                <div class="insta">
+                    <header class="font-weight-bold border-bottom d-flex justify-content-between align-items-center">
+                        <div>
+                            اینستاگرام
+                        </div>
+                        <div style="font-weight: normal; font-size: .8em; color: #6c63ff"><a href="#">دنبال کنید</a>
+                        </div>
+                    </header>
+                    <main>
+
+                        <section class="d-flex flex-wrap pt-3 px-3 justify-content-between   ">
+                            <div class="mb-3" style=" flex-basis: 33%; text-align: center;">
+                                <img src="./assets/img/xx.webp" width="100%" alt="">
+                            </div>
+                            <div class="mb-3" style=" flex-basis: 33%; text-align: center;">
+                                <img src="./assets/img/xx.webp" width="100%" alt="">
+                            </div>
+                            <div class="mb-3" style=" flex-basis: 33%; text-align: center;">
+                                <img src="./assets/img/xx.webp" width="100%" alt="">
+                            </div>
+                            <div class="mb-3" style=" flex-basis: 33%; text-align: center;">
+                                <img src="./assets/img/xx.webp" width="100%" alt="">
+                            </div>
+                            <div class="mb-3" style=" flex-basis: 33%; text-align: center;">
+                                <img src="./assets/img/xx.webp" width="100%" alt="">
+                            </div>
+                            <div class="mb-3" style=" flex-basis: 33%; text-align: center;">
+                                <img src="./assets/img/xx.webp" width="100%" alt="">
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+
+
+    <footer>
+        <div class="footer_curve">
+            <svg class="d-none d-lg-block" xmlns="http://www.w3.org/2000/svg" width="100%"
+                viewBox="0 0 2062.216 47.419">
+                <path id="footer-curve" d="M0,0C1073.173,104.411,2062.115,0,2062.115,0"
+                    transform="translate(0.048 0.498)" fill="white" stroke="none" stroke-width="1" />
+            </svg>
+            <svg class="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="1923.146" viewBox="0 0 1923.146 109.303"
+                style="width: 100%; position: absolute; top: -1px;/*! transform: rotate(180deg); */">
+                <path id="Path_1" data-name="Path 1" d="M0,0C974.5,243.625,1922.9,0,1922.9,0"
+                    transform="translate(0.121 0.485)" fill="white" stroke="" stroke-width=""></path>
+            </svg>
+
+        </div>
+        <div class="container" style="padding-top: 90px;">
+            <div class="footer__top d-flex flex-wrap">
+                <div class="col-12 d-lg-none mb-5" style="margin-top: -35px;">
+                    <div class="d-flex flex-column">
+                        <a href="#"><img src="./assets/img/Logo@2x.png" width="100%" alt=""></a>
+                        <p style="color: #787878;">باشگاه فیتیار با این هدف به وجود
+                            اومده که با بهترین روش سلامتی رو به مردم ایران هدیه بده و
+                            باعث بشه که علوم تغذیه سنتی و مدرن رو در حین رژیم درمانی، آموزش بده! به عبارت دیگه هم تناسب
+                            اندام و سلامتی رو به شما هدیه میده و هم علمشو بهتون یاد میده.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 mb-5 mb-lg-0">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex align-items-center">
+                            <div class=" ml-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21.238" height="15.291"
+                                    viewBox="0 0 21.238 15.291">
+                                    <path
+                                        d="M0 0v15.292h21.238V0zm.849.849h19.54v1.062l-8.31 7.244-.04.04a2.194 2.194 0 0 1-1.42.571 2.2 2.2 0 0 1-1.42-.571c-.158-.138-1.293-1.118-2.111-1.832C4.661 5.255.974 2.021.849 1.912zm0 2.19c.737.642 3.35 2.917 5.575 4.858L.849 12.305zm19.539 0v9.266l-5.575-4.407c2.226-1.943 4.839-4.216 5.576-4.858zM7.075 8.469l1.566 1.367.013.013a3.057 3.057 0 0 0 1.965.77 3.051 3.051 0 0 0 1.978-.783c.12-.1 1.059-.913 1.58-1.367l6.212 4.911v1.062H.849V13.38z"
+                                        data-name="Path 319" />
+                                </svg>
+                            </div>
+                            <h5 class="mb-0">عضویت در خبرنامه</h5>
+                        </div>
+                        <p class="my-3">دریافت جدیدترین تخفیف‌ها و پیشنهادات</p>
+                        <div style="box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1); position: relative; border-radius: 30px;
+                            overflow: hidden;">
+                            <input class="form-control"
+                                style="opacity: .5; border-radius: 30px; font-size: 1em; height: 45px;" type="text"
+                                placeholder="ایمیل خود را وارد کنید">
+                            <button class="btn btn--orange footer__send-btn">ارسال</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 pt-2 pt-lg-0">
+                    <div class="px-lg-5">
+                        <h5>دسترسی سریع</h5>
+                        <ul>
+                            <li><a href="#"> خانه </a></li>
+                            <li><a href="#"> مقالات </a></li>
+                            <li><a href="#"> حرکات تمرینی </a></li>
+                            <li><a href="#"> درباره‌ ما </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 pt-2 pt-lg-0">
+                    <div>
+                        <h5>سرویس‌ها</h5>
+                        <ul>
+                            <li><a href="#"> دریافت برنامه تمرینی </a></li>
+                            <li><a href="#"> دریافت رژیم غذایی </a></li>
+                            <li><a href="#"> دریافت برنامه تمرینی و رژیم غذایی </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-3" style="margin-top: -35px;">
+                    <div class="d-flex flex-column">
+                        <a href="#"><img src="./assets/img/Logo@2x.png" width="100%" alt=""></a>
+                        <p style="color: #787878;">باشگاه فیتیار با این هدف به وجود
+                            اومده که با بهترین روش سلامتی رو به مردم ایران هدیه بده و
+                            باعث بشه که علوم تغذیه سنتی و مدرن رو در حین رژیم درمانی، آموزش بده! به عبارت دیگه هم تناسب
+                            اندام و سلامتی رو به شما هدیه میده و هم علمشو بهتون یاد میده.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__middle d-flex flex-column flex-lg-row justify-content-between mt-lg-0 mt-4">
+                <div class="mt-lg-n4">
+                    <div class="mb-3">
+                        <div class="mb-1 text-muted">شماره تماس:</div>
+                        <div class="font-weight-bold">۰۷۱۳۵۴۲۴۳۱ - ۰۹۳۸۷۳۷۴۴۸۷</div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="mb-1 text-muted">ایمیل:</div>
+                        <div class="font-weight-bold">iHMahmoodi@gmail.com</div>
+                    </div>
+                    <div class="">
+                        <div class="mb-1 text-muted">آدرس:</div>
+                        <div class="font-weight-bold">شیراز - بلوار مدرس - شهرک محراب</div>
+                    </div>
+                </div>
+                <div class="mt-5 mt-lg-0 pt-4 pt-lg-0" style="width: max-content;">
+                    <h5>
+                        ما را در شبکه های اجتماعی دنبال کنید
+                    </h5>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div><a href="#">
+                                <svg xmlns=" http://www.w3.org/2000/svg" width="26.585" height="26.585"
+                                    viewBox="0 0 26.585 26.585">
+                                    <path id="prefix__instagram"
+                                        d="M13.293 0c-3.612 0-4.062.017-5.48.08A9.8 9.8 0 0 0 4.586.7a6.509 6.509 0 0 0-2.355 1.531A6.486 6.486 0 0 0 .7 4.586a9.773 9.773 0 0 0-.62 3.227C.013 9.231 0 9.681 0 13.293s.017 4.062.08 5.48A9.808 9.808 0 0 0 .7 22a6.519 6.519 0 0 0 1.533 2.355 6.5 6.5 0 0 0 2.355 1.533 9.814 9.814 0 0 0 3.227.618c1.418.066 1.869.08 5.48.08s4.062-.017 5.48-.08A9.836 9.836 0 0 0 22 25.887 6.793 6.793 0 0 0 25.887 22a9.808 9.808 0 0 0 .618-3.227c.066-1.418.08-1.869.08-5.48s-.017-4.062-.08-5.48a9.83 9.83 0 0 0-.618-3.227 6.524 6.524 0 0 0-1.533-2.355A6.477 6.477 0 0 0 22 .7a9.779 9.779 0 0 0-3.228-.62C17.354.013 16.9 0 13.293 0zm0 2.393c3.548 0 3.971.018 5.372.079a7.324 7.324 0 0 1 2.467.46 4.374 4.374 0 0 1 2.523 2.522 7.339 7.339 0 0 1 .457 2.467c.063 1.4.078 1.823.078 5.372s-.017 3.971-.082 5.372a7.481 7.481 0 0 1-.466 2.467 4.221 4.221 0 0 1-1 1.531 4.147 4.147 0 0 1-1.529.993 7.393 7.393 0 0 1-2.476.457c-1.411.063-1.827.078-5.382.078s-3.972-.017-5.382-.082a7.537 7.537 0 0 1-2.473-.467 4.116 4.116 0 0 1-1.528-1 4.036 4.036 0 0 1-1-1.529 7.544 7.544 0 0 1-.465-2.476c-.05-1.4-.068-1.827-.068-5.366s.022-3.971.071-5.38a7.535 7.535 0 0 1 .465-2.475 3.94 3.94 0 0 1 1-1.53A3.932 3.932 0 0 1 5.4 2.892a7.357 7.357 0 0 1 2.46-.466c1.412-.05 1.828-.066 5.382-.066l.05.033zm0 4.074a6.826 6.826 0 1 0 6.826 6.826 6.825 6.825 0 0 0-6.826-6.826zm0 11.257a4.431 4.431 0 1 1 4.431-4.431 4.43 4.43 0 0 1-4.431 4.43zM21.984 6.2a1.6 1.6 0 1 1-1.6-1.594 1.6 1.6 0 0 1 1.6 1.594z"
+                                        style="fill:#6f6f6f" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div><a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26.585" height="23.147"
+                                    viewBox="0 0 26.585 23.147">
+                                    <g id="prefix__XMLID_496_">
+                                        <path id="prefix__XMLID_497_"
+                                            d="M.47 30.5l6.13 2.286 2.371 7.625a.721.721 0 0 0 1.145.345l3.415-2.784a1.019 1.019 0 0 1 1.242-.035l6.159 4.471a.722.722 0 0 0 1.131-.437l4.512-21.7a.722.722 0 0 0-.967-.821l-25.14 9.7A.722.722 0 0 0 .47 30.5zm8.115 1.069L20.556 24.2a.209.209 0 0 1 .252.33l-9.88 9.184a2.048 2.048 0 0 0-.635 1.225l-.337 2.494a.309.309 0 0 1-.6.044l-1.298-4.552a1.205 1.205 0 0 1 .526-1.356z"
+                                            transform="translate(0 -19.401)" style="fill:#6f6f6f" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div><a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="prefix___045-facebook" width="26.585"
+                                    height="26.585" data-name="045-facebook" viewBox="0 0 26.585 26.585">
+                                    <g id="prefix__Group_1010" data-name="Group 1010">
+                                        <path id="prefix__Path_477"
+                                            d="M23.262 0H3.323A3.326 3.326 0 0 0 0 3.323v19.939a3.326 3.326 0 0 0 3.323 3.323h9.969v-9.139H9.969v-4.153h3.323V9.969a4.984 4.984 0 0 1 4.985-4.985H21.6v4.155h-1.661c-.917 0-1.662-.086-1.662.831v3.323h4.154l-1.661 4.153h-2.493v9.139h4.985a3.326 3.326 0 0 0 3.323-3.323V3.323A3.326 3.326 0 0 0 23.262 0z"
+                                            data-name="Path 477" style="fill:#6f6f6f" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div><a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26.585" height="21.607"
+                                    viewBox="0 0 26.585 21.607">
+                                    <path id="prefix__twitter"
+                                        d="M26.533 4.819a11.077 11.077 0 0 1-3.129.858 5.492 5.492 0 0 0 2.4-3.016 11.257 11.257 0 0 1-3.464 1.311 5.448 5.448 0 0 0-9.427 3.72 5.577 5.577 0 0 0 .141 1.245A15.435 15.435 0 0 1 1.817 3.26 5.341 5.341 0 0 0 1.079 6 5.451 5.451 0 0 0 3.5 10.538a5.432 5.432 0 0 1-2.468-.682v.068a5.453 5.453 0 0 0 4.373 5.346 5.5 5.5 0 0 1-2.45.094 5.468 5.468 0 0 0 5.1 3.785A10.93 10.93 0 0 1 1.3 21.481a11.567 11.567 0 0 1-1.3-.075 15.5 15.5 0 0 0 8.371 2.447A15.394 15.394 0 0 0 23.877 8.361c0-.232 0-.465-.017-.7a11.006 11.006 0 0 0 2.725-2.822l-.052-.022z"
+                                        transform="translate(0 -2.246)" style="fill:#6f6f6f" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div><a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="prefix__Layer_2" width="26.585"
+                                    height="26.6" data-name="Layer 2" viewBox="0 0 26.585 26.6">
+                                    <defs>
+                                        <style>
+                                            .prefix__cls-1 {
+                                                fill: #6f6f6f
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g id="prefix__brand">
+                                        <g id="prefix__logo--black--without_text">
+                                            <path id="prefix__Path_469"
+                                                d="M141.306.78L138.87.142a4.117 4.117 0 0 0-5.036 2.922l-.615 2.308A12.608 12.608 0 0 1 141.306.78z"
+                                                class="prefix__cls-1" data-name="Path 469"
+                                                transform="translate(-129.843 -.003)" />
+                                            <path id="prefix__Path_470"
+                                                d="M125.281 39.33l-.6 2.257a4.117 4.117 0 0 0 2.922 5.036l2.335.623a12.612 12.612 0 0 1-4.657-7.916z"
+                                                class="prefix__cls-1" data-name="Path 470"
+                                                transform="translate(-124.543 -24.026)" />
+                                            <path id="prefix__Path_471"
+                                                d="M180.883 9.157l-2.623-.7a12.608 12.608 0 0 1 4.825 8.444l.72-2.724a4.117 4.117 0 0 0-2.922-5.02z"
+                                                class="prefix__cls-1" data-name="Path 471"
+                                                transform="translate(-157.356 -5.169)" />
+                                            <path id="prefix__Path_472"
+                                                d="M163.23 58.557l2.51.677a4.117 4.117 0 0 0 5.036-2.923l.708-2.662a12.616 12.616 0 0 1-8.254 4.908z"
+                                                class="prefix__cls-1" data-name="Path 472"
+                                                transform="translate(-148.175 -32.774)" />
+                                            <path id="prefix__Path_473"
+                                                d="M140.61 4.54a11.53 11.53 0 1 0 11.53 11.53 11.53 11.53 0 0 0-11.53-11.53zm-6.53 5.752a3.292 3.292 0 1 1 2.611 3.856 3.292 3.292 0 0 1-2.611-3.856zm4.79 9.962a3.292 3.292 0 1 1-.5-2.472 3.292 3.292 0 0 1 .5 2.472zm1.4-2.666a1.463 1.463 0 1 1 1.1-.227 1.463 1.463 0 0 1-1.1.227zm6.868 4.253a3.292 3.292 0 1 1-2.611-3.856 3.292 3.292 0 0 1 2.609 3.856zm-2.179-6.1a3.286 3.286 0 1 1 2.47-.5 3.292 3.292 0 0 1-2.47.5z"
+                                                class="prefix__cls-1" data-name="Path 473"
+                                                transform="translate(-127.315 -2.775)" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center  mt-5 mt-lg-0 pt-4 pt-lg-0 justify-content-center ">
+                    <div class="footer__box" style="width: 65px; margin-left: 15px;"><a href="#">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" id="prefix__Shape_3" width="100%" height=""
+                                    viewBox="0 0 79.271 67.07">
+                                    <g id="prefix__Group_996" data-name="Group 996">
+                                        <path id="prefix__Path_459"
+                                            d="M111.165 80.428c-12.231 4.4-14.658 9.209-21.077 18.8-5.174 7.775-8.878 9.337-14.052 8.923-10.379-2.645-11.5-12.747-10.858-13.065s5.972-3.027 8.3-4.461c3.289-2.008 13.093-7.011 18.2-14.659s4.79-16.411 3.194-20.076c-.99-2.294-3.992-8.763-12.774-7.329-12.3 3.346-18.235 15.391-21.077 22.307-2.651 6.055-3.832 14.977-3.832 21.032-6.164 2.8-9.613 4.047-13.413 6.373-12.774 7.648-11.816 13.7-11.816 13.7a22.39 22.39 0 0 1 3.513-2.549c3.768-2.263 9.9-5.481 14.69-7.967a56.561 56.561 0 0 1 7.345-3.187 37.357 37.357 0 0 0 3.513 8.285c3.545 6.15 12.327 10.93 20.758 7.967 6.036-2.135 10.092-8.6 11.369-10.962.287-.542.351-1.4 4.918-3.378a13.059 13.059 0 0 0 6.068-6.055s.83-2.836-.032-3.888c-.7-.829-2.4-.223-4.758-.255 1.277-2.231 5.748-3.505 5.748-3.505a16.359 16.359 0 0 0 6.068-5.417c.196-.316-.187-.284.005-.634zM69.33 66.088c6-10.229 18.267-15.36 19.161-4.78.734 8.986-3.673 13.511-6.387 16.252-5.812 5.863-17.564 11.472-17.564 11.472a37.132 37.132 0 0 1 4.79-22.944z"
+                                            data-name="Path 459" transform="translate(-31.949 -48.356)"
+                                            style="fill:#0e4d93" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="text-center" style="font-size: .6em;">نماد اعتماد الکترونیکی</div>
+                        </a>
+                    </div>
+                    <div class="footer__box" style="width: 65px;"><a href="#"><img src="./assets/img/samandehi@2x.png"
+                                width="100%" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container d-flex justify-content-lg-between justify-content-center">
+                <div>
+                    © 2020 iHMahmoodi all rights reserved by Hossein Mahmoodi
+                </div>
+                <div class="d-none d-lg-block">
+                    Design by Hossein Mahmoodi - iHMahmoodi@gmail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- bootstrap js -->
+    <script src=" https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <script src="./assets/lib/slick/slick.min.js"></script>
+
+    <!-- custom js -->
+    <script src="./scripts/slick-custom.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
