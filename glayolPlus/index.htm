@@ -1,0 +1,1423 @@
+<!doctype html>
+<html lang="fa">
+
+<head>
+  <title>Glayol Plus</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.7/destyle.css">
+  <!-- <script src="prefixfree.min.js"></script> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<!-- 
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"> -->
+
+
+  <link rel="stylesheet" type="text/css" href="./plugin/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./plugin/slick/slick-theme.css">
+
+  <link rel="stylesheet" type="text/css" href="styles/mainStyle.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
+</head>
+
+<body>
+
+
+
+
+  <!-- header -->
+
+  <header class="header">
+
+      <!-- top header -->
+      <div class="header__top border-bottom px-15">
+          <div class="main--size row pt-27 justify-content-between">
+
+
+              <!-- burger button -->
+              <div class="header__top__burger-btn d-md-none mr-3  ">
+
+                  <button data-toggle="collapse" data-target="#me">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                          stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="3" y1="12" x2="21" y2="12"></line>
+                          <line x1="3" y1="6" x2="21" y2="6"></line>
+                          <line x1="3" y1="18" x2="21" y2="18"></line>
+                      </svg>
+                  </button>
+
+              </div>
+
+
+              <!-- logo -->
+              <div class="col-sm-3 col-2 pr-4">
+                  <a href="#">
+                      <img src="images/logo.png" alt="دیجی مارک" class="header__top__logo">
+                  </a>
+              </div>
+
+              <div class="col-6 header__search header__search--responsive">
+                  <form action="" class="form-inline">
+                      <div class="form-group p-2 border search__box w-100">
+                          <label for="search">
+                              <div class="border-left pl-3 h-30 pt-1 pr-1">
+                                  جستجو
+                              </div>
+                          </label>
+                          <span style="width: calc(100% - 60px);">
+                              <input class="border-0 mr-3" style="width: calc(100% - 60px);" type="text"
+                                  placeholder="نام کالا، برند و یا دسته موردنظر خود را جستجو کنید" style="width: 85%">
+                              <img src="images/Icons/search.svg" class="search-icon" alt="">
+
+                          </span>
+                      </div>
+
+                  </form>
+
+              </div>
+
+
+              <!-- <div class="col-1"></div> -->
+              <div class="col-md-3 col-6 my-auto row top__login justify-content-end custom-chrome">
+
+
+                  <div class="ml-3 custom-chrome--fc">
+                      <a href="#">
+                          <img src="images\Icons\log-in - edited-01.svg" alt="">
+                          <small class="d-none d-sm-inline">ورود / ثبت‌نام</small>
+                      </a>
+                  </div>
+
+                  <div class="mr-3 top__login__margin-responsive">
+                      <a href="#">
+                          <span>
+                              <span class="sabad-badge">۵</span>
+                              <img src="images\Icons\shopping-bag - edited-01.svg" alt="shopping-bag">
+                          </span>
+                          <small class="d-none d-sm-inline">سبد خرید</small>
+                      </a>
+                  </div>
+
+
+              </div>
+
+          </div>
+      </div>
+
+
+      <!-- menu -->
+
+      <div class="header__menu border-bottom shadow-sm">
+          <div class="row justify-content-center mr-5">
+              <ul class="menu__list d-flex mr-n5">
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">فروشگاه ها</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2 menu__list__item--active">محصولات</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">برندها</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">سفارشات</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">همکاری با ما</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">درباره ما</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">تماس با ما</li>
+                  </a>
+              </ul>
+          </div>
+      </div>
+
+
+
+      <!-- responsive search box -->
+      <div class="header__search d-md-none mx-2 py-3">
+          <form action="" class="form-inline">
+              <div class="form-group p-2 border search__box w-100 mb-0">
+                  <label for="search">
+                      <div class="border-left pl-3 h-30 pt-1 pr-1">
+                          جستجو
+                      </div>
+                  </label>
+                  <span style="width: calc(100% - 60px);">
+                      <input class="border-0 mr-3" style="width: calc(100% - 60px);" type="text"
+                          placeholder="نام کالا، برند و یا دسته موردنظر خود را جستجو کنید">
+                      <img src="images/Icons/search.svg" class="search-icon" alt="">
+
+                  </span>
+              </div>
+
+          </form>
+
+      </div>
+
+      <!-- dropdown menu -->
+      <div id="me" class="collapse header_dropdown-menu border-top">
+
+          <div class="mr-5">
+              <ul class="menu__list flex-column mr-n5">
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">فروشگاه ها</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2 menu__list__item--active">محصولات</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">برندها</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">سفارشات</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">همکاری با ما</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">درباره ما</li>
+                  </a>
+                  <a href="#">
+                      <li class="menu__list__item px-3 py-2">تماس با ما</li>
+                  </a>
+              </ul>
+          </div>
+
+      </div>
+
+
+
+
+  </header>
+
+
+  <main class="main--size">
+
+    <div class="bg-light-white pb-5 px-15">
+
+
+      <!-- slider -->
+      <div class="slider-show px-sm-5 pt-5 pb-4">
+        <!-- slide show -->
+        <div id="a" class="carousel slide carousel-fade" data-ride="carousel" style="transition: .5s">
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/slider1.png" alt="pho">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider1.png" alt="pho">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider1.png" alt="pho">
+            </div>
+            <div class="carousel-item">
+              <img src="images/slider1.png" alt="pho">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+
+          <!--   
+  <a class="carousel-control-prev" href="#a" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#a" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+ -->
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators carousel-indicators-numbers text-center flex-column justify-content-between">
+            <li data-target="#a" data-slide-to="0" class="active">01</li>
+            <li data-target="#a" data-slide-to="1">02</li>
+            <li data-target="#a" data-slide-to="2">03</li>
+            <li data-target="#a" data-slide-to="3">04</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+
+
+      <!-- categories -->
+
+      <div class="row category-row justify-content-around mt-3 px-4">
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/shirt-button-with-two-holes - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">انواع دکمه</div>
+          </a>
+        </div>
+
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/washing-machine - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">دستور شستشو</div>
+          </a>
+        </div>
+
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/price-tag - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">کارت آویز</div>
+          </a>
+        </div>
+
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/handmade - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">لیبل بافت</div>
+          </a>
+        </div>
+
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/ruler - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">نوار</div>
+          </a>
+        </div>
+
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/stamp - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">چاپ پرسی</div>
+          </a>
+        </div>
+
+
+        <div class="sdfdd mt-2">
+          <a href="#" class="category-row__box shadow-sm d-flex flex-column justify-content-center align-items-center">
+            <img src="images/icons/pocket - ed-01.svg" alt="دکمه" class="category-row__box__image">
+            <div class="mt-2 font-weight-bold">چرم و فلز</div>
+          </a>
+        </div>
+
+
+
+      </div>
+
+
+      <!-- info 3 boxes -->
+
+      <div class="row info-row justify-content-around px-4">
+        <div class="col-md-4 pl-27 pr-27 mt-2 mt-md-0">
+          <div class=" info-row__box row shadow-sm justify-content-around align-content-center">
+            <span class="d-flex flex-column my-auto">
+              <span class="font-weight-bolder info-row__box__header">
+                ١٠٠ محبوبیت بین فروشگاه‌ها
+              </span>
+              <span class="font-weight-light mt-3 info-row__box__body">
+                مشاهده نظرات کاربران
+              </span>
+            </span>
+
+            <img src="images/icons/shop - ed-01.svg" alt="home" class="info-row__box__img">
+          </div>
+        </div>
+        <div class="col-md-4 pl-27 pr-27 mt-2 mt-md-0">
+          <div class=" info-row__box row shadow-sm justify-content-around align-content-center">
+            <span class="d-flex flex-column my-auto">
+              <span class="font-weight-bolder info-row__box__header">
+                تحویل سفارش در کمترین زمان
+              </span>
+              <span class="font-weight-light mt-3 info-row__box__body ">
+                مشاهده فروشندگان
+              </span>
+            </span>
+
+            <img src="images\Icons\delivery-truck - edited-01.svg" alt="delivery-truck" class="info-row__box__img">
+          </div>
+        </div>
+        <div class="col-md-4 pl-27 pr-27 mt-2 mt-md-0">
+          <div class=" info-row__box row shadow-sm justify-content-around align-content-center">
+            <span class="d-flex flex-column my-auto">
+              <span class="font-weight-bolder info-row__box__header">
+                ارسال رایگان کالا
+              </span>
+              <span class="font-weight-light mt-3 info-row__box__body">
+                برای خرید بالای ١٠٠ هزار تومان
+              </span>
+            </span>
+
+            <img src="images/icons/product - ed-01.svg" alt="home" class="info-row__box__img">
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- logo box -->
+
+      <div class="row brand-row px-4">
+        <div class=" brand-row__box px-5  logo-slide shadow-lg">
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- new products boxes -->
+
+    <div class="new-row px-15">
+
+      <h3 class="text-center">جدیدترین‌ ها</h3>
+
+      <div class="new-row__slide new-slide ">
+
+        <div class="row__card my-5 ">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5 ">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- </div> -->
+
+
+    <!-- best sell products boxes -->
+
+    <div class="new-row pt-27 px-15 mt-0">
+
+      <h3 class="text-center">پرفروش‌ترین‌ها</h3>
+
+      <div class="new-row__slide new-slide ">
+
+        <div class="row__card my-5 ">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5 ">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+        <div class="row__card my-5">
+
+          <!-- card -->
+          <a class="card card--border" href="#">
+            <!-- <div class="card-header"></div> -->
+
+            <img src="images/product-mark.jpg" class="card-img-top row__card__img" alt="" width="100%">
+
+
+            <div class="card-body card-body--backg">
+
+              <p class="card-text text-center">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+              <!-- <a href="#" class="card-link">click</a> -->
+            </div>
+            <!-- <img src="" class="card-img-bottom" alt="x" width="100%"> -->
+            <div class="card-footer font-weight-bold row__card__footer bg-white">
+              <del class="float-right small mt-1">
+                ۸،۵۰۰ تومان
+              </del>
+
+              <span class="text-price float-left">
+                ۶،۶۳۰ تومان
+              </span>
+              <span class="clearfix"></span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ads boxes -->
+
+    <div class="row bg-light-white adv-row justify-content-center align-items-center px-15">
+
+      <!-- right box -->
+      <div class="col-md-5 col-12 row adv-row__boxes px-0">
+
+        <div class="col-6 d-flex flex-column px-0 justify-content-center">
+
+          <a href="#" class="adv-row__boxes__box shadow-sm mb-12 bg-white">
+            <img src="images/adv-melli.PNG" alt="melli" class="adv-row__boxes__box__img">
+          </a>
+
+          <a href="#" class="adv-row__boxes__box shadow-sm mb-12 bg-white">
+            <p class="ad-text text-center font-weight-bold">
+              محل تبلیغات شما
+            </p>
+          </a>
+
+        </div>
+
+
+        <div class="col-6 d-flex flex-column px-0 justify-content-center">
+
+          <a href="#" class="adv-row__boxes__box shadow-sm mb-12 bg-white">
+            <p class="ad-text text-center font-weight-bold">
+              محل تبلیغات شما
+            </p>
+          </a>
+          <a href="#" class="adv-row__boxes__box shadow-sm mb-12 bg-white">
+            <p class="ad-text text-center font-weight-bold">
+              محل تبلیغات شما
+            </p>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- left box -->
+      <div class="col-md-7 col-12 row adv-row__boxes mr-2 p-0">
+
+        <!-- recent posts -->
+        <div class="col-6 pl-0">
+          <div class="adv-row__recent bg-white shadow-sm px-3">
+            <span class="adv-row__recent__badge text-center font-weight-bold mr-2">
+              مطالب اخیر
+            </span>
+
+            <div class="d-flex flex-column adv-row__recent__card adv-card-slick">
+
+              <a href="#">
+                <div class="adv-row__recent__img">
+                  <img src="images/adv-cloth.PNG" alt="digi mark" class="w-100 br">
+                </div>
+
+                <div class="adv-row__recent__body d-flex flex-column mr-3">
+                  <div class="adv-row__recent__body__header">
+                    لورم ایپسوم متن ساختگی با تولید سادگی
+                  </div>
+                  <div class="adv-row__recent__body__footer mt-3 text-muted">
+                    خرید از دیجی مارک
+                  </div>
+
+                </div>
+
+              </a>
+
+
+              <a href="#">
+                <div class="adv-row__recent__img">
+                  <img src="images/adv-melli.PNG" alt="digi mark" class="w-100 br">
+                </div>
+
+                <div class="adv-row__recent__body d-flex flex-column mr-3 mb-5">
+                  <div class="adv-row__recent__body__header">
+                    لورم ایپسوم متن ساختگی با تولید سادگی
+                  </div>
+                  <div class="adv-row__recent__body__footer mt-3">
+                    خرید از دیجی مارک
+                  </div>
+
+                </div>
+
+              </a>
+
+
+              <a href="#">
+                <div class="adv-row__recent__img">
+                  <img src="images/adv-cloth.PNG" alt="digi mark" class="w-100 br">
+                </div>
+
+                <div class="adv-row__recent__body d-flex flex-column mr-3 mb-5">
+                  <div class="adv-row__recent__body__header">
+                    لورم ایپسوم متن ساختگی با تولید سادگی
+                  </div>
+                  <div class="adv-row__recent__body__footer mt-3">
+                    خرید از دیجی مارک
+                  </div>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- comments -->
+        <div class="col-6 pr-20">
+
+          <div class="adv-row__comments bg-white shadow-sm d-flex flex-column">
+            <span class="adv-row__recent__badge text-center font-weight-bold mr-4">
+              نظر خریدار
+            </span>
+
+            <span class="adv-row__comments__ d-flex flex-column px-3">
+
+              <span class="row adv-row__comments__one justify-content-around">
+
+                <!-- comment img -->
+                <span class="adv-row__comments__one__img">
+                  <img src="images/adv-cloth.PNG" alt="profile" class="">
+                </span>
+
+                <span class="d-flex flex-column justify-content-center " style="width: calc(93% - 60px);">
+                  <span class="adv-row__comments__one__n font-weight-bold">
+                    محمدرضا فرحزاد
+                  </span>
+
+                  <span class="adv-row__comments__one__c ">
+                    کیفیت جنس‌ها عالی هستند و قیمتش هم مناسب
+                  </span>
+                  <hr style="margin-left: -11px;">
+                </span>
+
+
+              </span>
+
+
+              <span class="row adv-row__comments__one justify-content-around">
+
+                <!-- comment img -->
+                <span class="adv-row__comments__one__img">
+                  <img src="images/adv-cloth.PNG" alt="profile" class="">
+                </span>
+
+                <span class="d-flex flex-column justify-content-center " style="width: calc(93% - 60px);">
+                  <span class="adv-row__comments__one__n font-weight-bold">
+                    محمدرضا فرحزاد
+                  </span>
+
+                  <span class="adv-row__comments__one__c ">
+                    کیفیت جنس‌ها عالی هستند و قیمتش هم مناسب
+                  </span>
+                  <hr style="margin-left: -11px;">
+                </span>
+
+
+              </span>
+
+
+              <span class="row adv-row__comments__one justify-content-around">
+
+                <!-- comment img -->
+                <span class="adv-row__comments__one__img">
+                  <img src="images/adv-cloth.PNG" alt="profile" class="">
+                </span>
+
+                <span class="d-flex flex-column justify-content-center " style="width: calc(93% - 60px);">
+                  <span class="adv-row__comments__one__n font-weight-bold">
+                    محمدرضا فرحزاد
+                  </span>
+
+                  <span class="adv-row__comments__one__c ">
+                    کیفیت جنس‌ها عالی هستند و قیمتش هم مناسب
+                  </span>
+                  <hr style="margin-left: -11px;">
+                </span>
+
+
+              </span>
+
+
+              <span class="row adv-row__comments__one justify-content-around">
+
+                <!-- comment img -->
+                <span class="adv-row__comments__one__img">
+                  <img src="images/adv-cloth.PNG" alt="profile" class="">
+                </span>
+
+                <span class="d-flex flex-column justify-content-center " style="width: calc(93% - 60px);">
+                  <span class="adv-row__comments__one__n font-weight-bold">
+                    محمدرضا فرحزاد
+                  </span>
+
+                  <span class="adv-row__comments__one__c ">
+                    کیفیت جنس‌ها عالی هستند و قیمتش هم مناسب
+                  </span>
+                  <hr style="margin-left: -11px;">
+                </span>
+
+
+              </span>
+
+
+              <span class="row adv-row__comments__one justify-content-around">
+
+                <!-- comment img -->
+                <span class="adv-row__comments__one__img">
+                  <img src="images/adv-cloth.PNG" alt="profile" class="">
+                </span>
+
+                <span class="d-flex flex-column justify-content-center " style="width: calc(93% - 60px);">
+                  <span class="adv-row__comments__one__n font-weight-bold">
+                    محمدرضا فرحزاد
+                  </span>
+
+                  <span class="adv-row__comments__one__c ">
+                    کیفیت جنس‌ها عالی هستند و قیمتش هم مناسب
+                  </span>
+                  <hr style="margin-left: -11px;">
+                </span>
+
+
+              </span>
+
+
+
+
+            </span>
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- our customers -->
+    <!-- logo box -->
+
+    <div class="px-15">
+      <span class="text-center">
+        <h3 class="mt-40">مشتریان ما</h3>
+      </span>
+
+      <div class="row brand-row px-4">
+        <div class=" brand-row__box px-5  logo-slide shadow-lg">
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+          <a href="#" class=" text-center">
+            <img src="images/brand-puma.PNG" alt="puma" class="brand-row__img">
+          </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- footer -->
+
+  <footer class="main--size">
+
+
+      <!--fast send row -->
+
+      <div class="bg-white fast-row shadow-sm row justify-content-around px-15">
+
+
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images/icons/delivery-truck - edited-01.svg" alt="delivery-truck">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>ارسال سریع</h5>
+              </div>
+          </div>
+
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images\Icons\credit-card - edited-01.svg" alt="credit-card">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>پرداخت امن</h5>
+              </div>
+          </div>
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images\Icons\correct - edited-01.svg" alt="correct">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>اصالت کالا</h5>
+              </div>
+          </div>
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images\Icons\support - edited-01.svg" alt="support">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>پشتیبانی قوی</h5>
+              </div>
+          </div>
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images\Icons\tap - edited-01.svg" alt="tap">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>انتخاب کالا</h5>
+              </div>
+          </div>
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images\Icons\cart - edited-01-01.svg" alt="cart">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>قدرت انتخاب</h5>
+              </div>
+          </div>
+          <div class="fast-row__card d-flex flex-column justify-content-center align-items-center">
+              <div class="fast-row__card__img-wrapper">
+                  <img src="images\Icons\save - edited-01.svg" alt="save">
+              </div>
+
+              <div class="fast-row__card__text">
+                  <h5>ذخیره زمان</h5>
+              </div>
+          </div>
+
+      </div>
+
+
+
+
+      <!-- social -->
+      <div class="footer__social row px-15">
+
+          <!-- right -->
+          <div class="col-md-8 col-12 footer__social__right d-flex flex-column">
+
+              <div class="footer__social__right__logo-wrapper">
+                  <img src="images/logo.PNG" alt="digi mark">
+              </div>
+
+              <div class="footer__social__right__p-wrapper text-muted">
+                  <p>
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                      چاپگرها و متون
+                      بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                      کاربردهای متنوع
+                      با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت
+                      فراوان جامعه
+                      و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان
+                      خلاقی و فرهنگ
+                      پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                      راهکارها و
+                      شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات
+                      پیوسته اهل دنیای
+                      موجود طراحی اساسا مورد استفاده قرار گیرد.
+                  </p>
+              </div>
+
+              <div class="footer__social__right__contact row px-sm-4">
+
+
+                  <div class="col-4 footer__social__right__contact__item border-left">
+                      <p class="mt-3">
+                          ما هر روز از ساعت 9 تا 18 تو دفترمون هستیم و تقریبا 24 ساعته تو فضای مجازی آنلاینیم
+                      </p>
+                  </div>
+                  <div class="col-4 footer__social__right__contact__item border-left">
+                      <p class="mt-3 d-flex" style="font-size: 9px;">
+
+                          <span style="width: 60%;">
+                              شماره تماس :
+                          </span>
+
+                          <span style="text-align: left;">۴۴۹۰۱۱۲۳ - ۰۲۱ ، ۴۴۹۰۱۱۲۳ ۰۲۱ ۴۴۹۰۱۱۲۳ ۰۲۱ ، ۴۴۹۰۱۱۲۳
+                              ۰۲۱</span>
+                      </p>
+                  </div>
+
+                  <div class="col-4 footer__social__right__contact__item">
+                      <p class="mt-3">
+                          آدرس ما : تهران، چهارراه استانبول، بازارچه فردوسی، طبقه اول، پلاک 217
+                      </p>
+                  </div>
+
+
+              </div>
+
+              <div class="footer__social__right__apps row justify-content-center text-right">
+
+                  <a href="#" class="footer__social__right__apps__app">
+                      <img src="images/footer-insta.PNG" alt="insta">
+                  </a>
+                  <a href="#" class="footer__social__right__apps__app">
+                      <img src="images/footer-insta.PNG" alt="insta">
+                  </a>
+                  <a href="#" class="footer__social__right__apps__app ml-0">
+                      <img src="images/footer-insta.PNG" alt="insta">
+                  </a>
+
+              </div>
+
+          </div>
+
+          <!-- left -->
+          <div
+              class="col-md-4 col-12 footer__social__left d-flex flex-column justify-content-xl-between justify-content-around pl-0">
+
+
+              <div
+                  class="row footer__social__left__send-link justify-content-center footer__social__left__search--responsive">
+
+                  <div class="header__search shadow-sm footer__social__left__search__form--responsive">
+                      <form action="" class="form-inline w-100">
+                          <div class="form-group p-2 border search__box w-100 footer__social__left__search__form--responsive"
+                              style="height: 60px;">
+                              <div class="border-left pl-3 h-30 pt-2 pr-1 text-secondary font-weight-bold">
+                                  ارسال لینک دانلود
+                              </div>
+                              <span style="width: calc(100% - 110px);">
+                                  <input class="border-0 mr-2" style="width: 80%;" type="text"
+                                      placeholder="لطفا شماره تلفن همراه خود را وارد کنید">
+                                  <label for="" class="float-left">
+                                      <div class="ml-n2 font-weight-bold" style="color: #68c3ff">ارسال
+                                      </div>
+                                  </label>
+                              </span>
+                          </div>
+
+                      </form>
+
+                  </div>
+
+              </div>
+
+
+              <div class="row footer__social__left__apps">
+
+                  <a href="#" class="col-6 footer__social__left__apps__app">
+                      <img src="images/footer-googlePlay.PNG" alt="google play">
+                  </a>
+
+                  <a href="#" class="col-6 footer__social__left__apps__app">
+                      <img src="images/footer-googlePlay.PNG" alt="google play">
+                  </a>
+
+
+              </div>
+
+
+              <div class="row footer__social__left__apps" style="margin-top: -15px;">
+
+                  <a href="#" class="col-6 footer__social__left__apps__app ">
+                      <img src="images/footer-googlePlay.PNG" alt="google play">
+                  </a>
+
+                  <a href="#" class="col-6 footer__social__left__apps__app">
+                      <img src="images/footer-googlePlay.PNG" alt="google play">
+                  </a>
+
+
+              </div>
+
+
+              <div class="row footer__social__left__signs ml-0">
+
+                  <div class="col-4 pl-0 ddsdfdd">
+
+                      <a href="#"
+                          class="d-flex flex-column bg-white shadow-sm footer__social__left__sign__one align-items-center">
+                          <img src="images/footer-sign.PNG" alt="sign" class="mt-2">
+                          <small class="text-center">ستاد ساماندهی پایگاه‌های اینترنتی</small>
+                      </a>
+
+
+
+                  </div>
+                  <div class="col-4 pl-0 ddsdfdd">
+
+                      <a href="#"
+                          class="d-flex flex-column bg-white shadow-sm footer__social__left__sign__one align-items-center">
+                          <img src="images/footer-sign.PNG" alt="sign" class="mt-2">
+                          <small class="text-center">ستاد ساماندهی پایگاه‌های اینترنتی</small>
+                      </a>
+
+
+
+                  </div>
+                  <div class="col-4 pl-0 ddsdfdd">
+
+                      <a href="#"
+                          class="d-flex flex-column bg-white shadow-sm footer__social__left__sign__one align-items-center">
+                          <img src="images/footer-sign.PNG" alt="sign" class="mt-2">
+                          <small class="text-center">ستاد ساماندهی پایگاه‌های اینترنتی</small>
+                      </a>
+
+                  </div>
+
+              </div>
+
+
+          </div>
+
+      </div>
+
+
+
+
+      <!-- footer menu -->
+      <div class="row footer-menu px-15">
+
+          <!-- menus -->
+          <div class="col-md-8 col-12 row">
+
+              <div class="col-4 d-flex flex-column footer-menu__list">
+
+                  <div class="footer-menu__list__header">
+                      لورم ایپسوم متن
+                  </div>
+
+                  <div class="footer-menu__list__items">
+                      <ul>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                      </ul>
+                  </div>
+
+
+
+              </div>
+              <div class="col-4 d-flex flex-column footer-menu__list">
+
+                  <div class="footer-menu__list__header">
+                      لورم ایپسوم متن
+                  </div>
+
+                  <div class="footer-menu__list__items">
+                      <ul>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                      </ul>
+                  </div>
+
+
+
+              </div>
+
+              <div class="col-4 d-flex flex-column footer-menu__list">
+
+                  <div class="footer-menu__list__header">
+                      لورم ایپسوم متن
+                  </div>
+
+                  <div class="footer-menu__list__items">
+                      <ul>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                          <li class=""><a href="#">لورم ایپسوم</a></li>
+                      </ul>
+                  </div>
+
+
+
+              </div>
+
+          </div>
+
+          <!-- text -->
+          <div class="col-md-4 col-12 footer-menu__p text-justify">
+              <p class="mb-0">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                  و متون
+                  بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+                  متنوع با
+                  هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+                  جامعه و
+                  متخصصان را می طلبد تا با نرم افزارها و دشواری موجود در ارائه راهکارها و شرایط
+              </p>
+          </div>
+
+      </div>
+
+      <!-- footer bottom -->
+      <div class="footer-bottom text-center">
+          استفاده از مطالب فروشگاه دیجی مارک فقط برای مقاصد غیرتجاری و با ذکر منبع بلامانع است. کلیه حقوق این سایت
+          متعلق به
+          فروشگاه آنلاین دیجی مارک می‌باشد.
+      </div>
+
+
+  </footer>
+
+  <!-- slide show -->
+
+
+
+
+  <!-- js -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script> -->
+
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="./plugin/slick/slick.js"></script>
+
+
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>
