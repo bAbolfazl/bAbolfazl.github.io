@@ -102,7 +102,7 @@
     font-size: 0.66em;
   }
   .main-articles__top-slide__item {
-    height: 240px;
+    height: 230px;
   }
   #slick-articles .slick-dots {
     top: unset;
@@ -118,6 +118,14 @@
   }
   #slick-articles .slick-dots li button {
     border: solid 2px #ccc;
+  }
+
+  .article-single__quote p {
+    padding-top: 17%;
+    padding-bottom: 12%;
+    background-size: 55px, 43px;
+    padding-right: initial;
+    padding-left: initial;
   }
 }
 
@@ -186,5 +194,8 @@
   }
   .main-articles__top-slide__item__body {
     padding-bottom: 20px;
+  }
+  .comment__display__item__rep {
+    margin-right: initial;
   }
 }
