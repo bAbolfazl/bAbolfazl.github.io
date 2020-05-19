@@ -68,6 +68,38 @@
   .main-articles__top-slide__item__body h2 {
     font-size: 2.6em;
   }
+  .main-workout__footer a {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .main-workout__footer a button {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 1.4em;
+  }
+  .main-workout__body {
+    height: 350px;
+    /* width: 255px; */
+  }
+  .main-workout__body .item._2 {
+    bottom: 93px;
+    left: 10%;
+  }
+  .main-workout__body .item._1 {
+    top: 32px;
+    left: 10%;
+  }
+  .main-workout__body .item._3 {
+    top: 70px;
+    right: 10%;
+  }
+  .main-workout__body .item._4 {
+    bottom: 135px;
+    right: 4%;
+  }
+  .main-workout__body .item {
+    font-size: .7em;
+  }
 }
 
 /* md */
@@ -197,5 +229,9 @@
   }
   .comment__display__item__rep {
     margin-right: initial;
+  }
+  .main-workout__heder {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }

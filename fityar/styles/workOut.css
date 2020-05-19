@@ -1,0 +1,78 @@
+.main-workout__heder {
+  border-radius: 37px;
+  border: solid 1px #707070;
+  display: flex;
+  justify-content: center;
+  padding: 10px 50px;
+  align-items: center;
+  position: relative;
+}
+.main-workOut .seperator {
+  z-index: -1;
+}
+
+.main-workout__heder .seperator {
+  height: 50%;
+}
+.main-workout__body {
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-workout__body .bg {
+  background-image: url("../assets/img/front-body@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  width: 600px;
+  position: relative;
+}
+.main-workout__body .item {
+  border-radius: 10px;
+  background-color: #f58341;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+}
+
+.main-workout__body .item._1 {
+  left: 0;
+  top: 70px;
+}
+
+.main-workout__body .item._2 {
+  left: 0;
+  bottom: 200px;
+}
+
+.main-workout__body .item._3 {
+  right: -8.5%;
+  top: 150px;
+}
+
+.main-workout__body .item._4 {
+  right: -17%;
+  bottom: 290px;
+}
+
+.main-workout__footer h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.main-workout__footer button:hover {
+  border-color: white;
+}
+.main-workout__footer button {
+  padding: 5px 45px !important;
+  color: #f58341;
+  border: solid 2px #f58341;
+  margin: 0 14px;
+}
+

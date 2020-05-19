@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log('running...')
+    console.log('running main js')
 
     // vars
     const hamberger = document.querySelector('#hambergerBtn')
