@@ -1,0 +1,268 @@
+@font-face {
+  font-family: IranSans;
+  src: url("../fonts/IRANSansWeb.woff");
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: IranSans !important;
+  height: 100vh;
+  /* font-size: 18px; */
+}
+
+.top-info {
+  background-image: linear-gradient(#4c4c4c, #030303);
+  height: 100px;
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+
+.obj.profile {
+  width: 45px;
+  height: 45px;
+  top: 45%;
+}
+
+.obj {
+  color: white;
+}
+
+.top-info__score-cont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.top-info__score {
+  background: url("../img/new/center-top-info.svg") no-repeat;
+  background-size: cover;
+  width: 35.75%;
+  height: 140%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ingame .name {
+  font-size: 18px;
+  width: 130px;
+}
+
+.obj.score {
+  margin: 0;
+  top: unset;
+  font-size: 2em;
+  margin-bottom: 1%;
+}
+
+.ingame #profile-p1 {
+  left: 5%;
+}
+.ingame #profile-p2 {
+  right: 0%;
+  left: unset;
+}
+
+.ingame #name-p1 {
+  text-align: left;
+  left: 24%;
+}
+.ingame #name-p2 {
+  left: unset;
+  right: 9%;
+}
+.top-info__profile__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: white;
+  border: #32d00a solid 2px;
+}
+.top-info__profile {
+  position: absolute;
+  left: 14%;
+  width: 140px;
+  display: flex;
+  flex-direction: row-reverse;
+  top: 0 !important;
+  height: 100%;
+  align-items: center;
+}
+
+.top-info__profile .obj.name {
+  position: static;
+  transform: none !important;
+  width: 100%;
+  margin: 0;
+}
+.top-info__profile--right {
+  left: unset;
+  right: 15%;
+}
+.top-info__score__time {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4%;
+  color: white;
+}
+
+.wrapper {
+  height: 100%;
+  /* width: 1100px; */
+  width: 100%;
+}
+.ingame #canvas {
+  transform: none;
+  top: unset;
+  left: unset;
+}
+
+/* menu */
+#menu {
+  background-image: url("../img/new/menu-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  direction: rtl;
+  text-align: right;
+  color: white;
+}
+.menu__top {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  margin: 0 5%;
+  padding: 0 3%;
+  width: 90%;
+  background-color: hsla(0, 0%, 100%, 0.144);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  border-radius: 0 0 15px 15px;
+}
+.menu__top--bg {
+  background: white;
+
+  filter: blur(5px);
+}
+.menu__top__sides {
+  display: flex;
+  align-items: center;
+}
+.bg--shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.7;
+}
+.menu__progress-bar {
+  position: relative;
+  z-index: 4;
+  margin-top: 150px;
+}
+#next {
+  right: 5%;
+  position: absolute;
+  top: -5px;
+}
+#prev {
+  left: 5%;
+  position: absolute;
+  top: -5px;
+}
+#btn-play {
+  padding: 10px;
+}
+.menu__list__top {
+  background-color: rgba(0, 0, 0, 0.46);
+  height: 60px;
+}
+.menu__list {
+  width: 50%;
+  margin: auto;
+  z-index: 5;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.menu__list__top {
+  font-weight: bold;
+  color: #d0a53d;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu__list__body {
+  background-color: hsla(0, 0%, 100%, 0.144);
+}
+.menu__list__body__item {
+  display: flex;
+  align-items: center;
+}
+.menu__list__body__item__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  font-weight: bold;
+}
+.menu__list__body__profile {
+  background-color: white;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: 15px;
+}
+.menu__list__body__name {
+  margin-left: 5px;
+  color: #d0a53d;
+}
+.menu.screen {
+  min-height: 100%;
+  height: unset;
+}
+.btn--green {
+  background-color: #14B545;
+}
+.btn--custom {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 8px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+@media only screen and (max-width: 813px) {
+  .top-info {
+    height: 75px;
+  }
+  .menu__top {
+    height: 90px;
+  }
+  .menu__list {
+    width: 90%;
+  }
+}
